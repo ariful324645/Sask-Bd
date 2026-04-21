@@ -16,6 +16,7 @@ import Service from "../components/Service";
 import AllProject from "../components/AllProject";
 import OurSheba from "../components/OurSheba";
 import OurSechasebok from "../components/OurSechasebok";
+import Ecomerce from "../components/Ecomerce";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "OurShechaSebok", // ✅ fixed
         element: <OurSechasebok></OurSechasebok>,
+      },
+      {
+        path: "ecomerce", // ✅ fixed
+        element: <Ecomerce></Ecomerce>,
       },
  
     ],
