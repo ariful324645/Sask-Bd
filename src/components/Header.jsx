@@ -10,7 +10,7 @@ const Header = () => {
         {/* Left Section */}
         <div className="flex items-center gap-3 max-w-[75%]">
           <img
-            src="https://i.ibb.co.com/239ssHb5/website-logo-e1754679330283.png"
+            src="https://i.ibb.co.com/xqdR8kZJ/website-logo-e1754679330283.png"
             alt="logo"
             className="w-12 h-12 md:w-24 md:h-24 object-contain"
           />

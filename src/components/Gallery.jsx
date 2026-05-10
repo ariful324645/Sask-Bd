@@ -3,18 +3,18 @@ import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
 const Gallery = () => {
   const images = [
-    "https://i.ibb.co.com/B2g5KJ3C/img1.jpg",
-    "https://i.ibb.co.com/q3qj34j3/img2.jpg",
-    "https://i.ibb.co.com/ycHpSX3s/img3.jpg",
-    "https://i.ibb.co.com/39wDXSht/img4.jpg",
-    "https://i.ibb.co.com/LdnnkDcM/img5.jpg",
-    "https://i.ibb.co.com/WvNScrvh/img6.jpg",
-    "https://i.ibb.co.com/XZ31Yk4J/img7.jpg",
-    "https://i.ibb.co.com/LdBrTJ4v/img8.jpg",
-    "https://i.ibb.co.com/TMnj8M5Z/img9.jpg",
-    "https://i.ibb.co.com/Kzzs5qbk/img10.jpg",
-    "https://i.ibb.co.com/rR2mYTmj/img11.jpg",
-    "https://i.ibb.co.com/TM9zPnJz/img12.jpg",
+    "https://i.ibb.co.com/1J8WFY6C/img1.jpg",
+    "https://i.ibb.co.com/ZzKZVkvH/img2.jpg",
+    "https://i.ibb.co.com/jdMDjHZ/img3.jpg",
+    "https://i.ibb.co.com/wFvhbH64/img4.jpg",
+    "https://i.ibb.co.com/Z6tTjS3H/img5.jpg",
+    "https://i.ibb.co.com/LdkFXH0r/img6.jpg",
+    "https://i.ibb.co.com/B2XTwxST/img7.jpg",
+    "https://i.ibb.co.com/S76f4QZS/img8.jpg",
+    "https://i.ibb.co.com/cMN9fsK/img9.jpg",
+    "https://i.ibb.co.com/KxxM9xSq/img10.jpg",
+    "https://i.ibb.co.com/1fBp3GzV/img11.jpg",
+    "https://i.ibb.co.com/gZW1qK5c/img12.jpg",
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);

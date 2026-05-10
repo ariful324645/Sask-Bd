@@ -120,10 +120,12 @@ const Navbar = () => {
             <li className="cursor-pointer hover:text-gray-200">যোগাযোগ</li>
             <Link to="ecomerce">
               {" "}
-              <li className="cursor-pointer hover:text-gray-200">E-comerce</li>
+              <li className="cursor-pointer hover:text-gray-200">ই-কমার্স</li>
             </Link>
-
-            <li className="cursor-pointer hover:text-gray-200">Book sells</li>
+            <Link to="course">
+              {" "}
+              <li className="cursor-pointer hover:text-gray-200">কোর্স</li>
+            </Link>
           </ul>
         </div>
 

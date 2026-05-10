@@ -3,13 +3,13 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const HeroSection = () => {
   const images = [
-    "https://i.ibb.co.com/WvNScrvh/img6.jpg",
-    "https://i.ibb.co.com/LdnnkDcM/img5.jpg",
-    "https://i.ibb.co.com/39wDXSht/img4.jpg",
-    "https://i.ibb.co.com/ycHpSX3s/img3.jpg",
-    "https://i.ibb.co.com/XZ31Yk4J/img7.jpg",
-    "https://i.ibb.co.com/LdBrTJ4v/img8.jpg",
-    "https://i.ibb.co.com/rR2mYTmj/img11.jpg",
+    "https://i.ibb.co.com/LdkFXH0r/img6.jpg",
+    "https://i.ibb.co.com/Z6tTjS3H/img5.jpg",
+    "https://i.ibb.co.com/wFvhbH64/img4.jpg",
+    "https://i.ibb.co.com/jdMDjHZ/img3.jpg",
+    "https://i.ibb.co.com/B2XTwxST/img7.jpg",
+    "https://i.ibb.co.com/S76f4QZS/img8.jpg",
+    "https://i.ibb.co.com/1fBp3GzV/img11.jpg",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -26,7 +26,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative w-11/12 mx-auto h-[400px] md:h-[500px] overflow-hidden">
+    <div className="relative w-11/12 mx-auto h-[500px] md:h-[700px] overflow-hidden">
       {/* Slider Wrapper */}
       <div
         className="flex h-full transition-transform duration-500"

@@ -17,6 +17,7 @@ import AllProject from "../components/AllProject";
 import OurSheba from "../components/OurSheba";
 import OurSechasebok from "../components/OurSechasebok";
 import Ecomerce from "../components/Ecomerce";
+import Course from "../components/Course";
 
 const router = createBrowserRouter([
   {
@@ -41,31 +42,31 @@ const router = createBrowserRouter([
       },
       {
         path: "goal", // ✅ fixed
-        element:<Goal></Goal>,
+        element: <Goal></Goal>,
       },
       {
         path: "income", // ✅ fixed
-        element:<Income></Income>,
+        element: <Income></Income>,
       },
       {
         path: "activity", // ✅ fixed
-        element:<Activity></Activity>,
+        element: <Activity></Activity>,
       },
       {
         path: "kendriyo", // ✅ fixed
-        element:<Kendriyo></Kendriyo>,
+        element: <Kendriyo></Kendriyo>,
       },
       {
         path: "video", // ✅ fixed
-        element:<Video></Video>,
+        element: <Video></Video>,
       },
       {
         path: "gallery", // ✅ fixed
-        element:<Gallery></Gallery>,
+        element: <Gallery></Gallery>,
       },
       {
         path: "allProject", // ✅ fixed
-        element:<AllProject></AllProject>,
+        element: <AllProject></AllProject>,
       },
       {
         path: "OurSheba", // ✅ fixed
@@ -79,7 +80,10 @@ const router = createBrowserRouter([
         path: "ecomerce", // ✅ fixed
         element: <Ecomerce></Ecomerce>,
       },
- 
+      {
+        path: "course", // ✅ fixed
+        element: <Course></Course>,
+      },
     ],
   },
 

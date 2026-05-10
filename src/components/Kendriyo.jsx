@@ -31,7 +31,7 @@ const Kendriyo = () => {
             {/* Image Section */}
             <div className="relative group">
               <img
-                src="https://i.ibb.co.com/8DpB59WR/side1.jpg"
+                src="https://i.ibb.co.com/xS7StCCz/side1.jpg"
                 className="w-full h-[400px] object-cover rounded-2xl shadow-xl transition duration-500 group-hover:scale-105"
               />
 
@@ -48,7 +48,7 @@ const Kendriyo = () => {
             {/* Image Section */}
             <div className="relative group">
               <img
-                src="https://i.ibb.co.com/wZsq65pY/man-1.jpg"
+                src="https://i.ibb.co.com/Y7TqwXZW/man-1.jpg"
                 className="w-full h-[400px] object-cover rounded-2xl shadow-xl transition duration-500 group-hover:scale-105"
               />
 
@@ -62,7 +62,8 @@ const Kendriyo = () => {
               </h1>
 
               <p className="text-gray-700 text-lg leading-10">
-                এস এম ইমরান আজাদ <br /> আয়কর আইনজীবী, ঢাকা ট্যাক্সেস বার এসোসিয়েশন
+                এস এম ইমরান আজাদ <br /> আয়কর আইনজীবী, ঢাকা ট্যাক্সেস বার
+                এসোসিয়েশন
               </p>
             </div>
           </div>

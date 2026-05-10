@@ -1,92 +1,43 @@
 import React, { useState } from "react";
 
 const Ecomerce = () => {
-const products = [
-  {
-    id: 1,
-    name: "Smartphone",
-    price: 15000,
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
-  },
-  {
-    id: 2,
-    name: "Laptop",
-    price: 55000,
-    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-  },
-  {
-    id: 3,
-    name: "LED Light",
-    price: 800,
-    image: "https://images.unsplash.com/photo-1555696958-c6c6c4f9c5f6",
-  },
-  {
-    id: 4,
-    name: "Desktop PC",
-    price: 65000,
-    image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7",
-  },
-  {
-    id: 5,
-    name: "Gaming Mouse",
-    price: 1200,
-    image: "https://images.unsplash.com/photo-1527814050087-3793815479db",
-  },
-  {
-    id: 6,
-    name: "Smart Watch",
-    price: 3500,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-  },
-
-  // 🔥 NEW 6 PRODUCTS
-
-  {
-    id: 7,
-    name: "Bluetooth Headphones",
-    price: 2500,
-    image: "https://images.unsplash.com/photo-1580894908361-967195033215",
-  },
-  {
-    id: 8,
-    name: "Tablet",
-    price: 22000,
-    image: "https://images.unsplash.com/photo-1587033411391-5d9e51cce126",
-  },
-  {
-    id: 9,
-    name: "Office Chair",
-    price: 8000,
-    image: "https://images.unsplash.com/photo-1582582494700-8e7b6b2a8d6d",
-  },
-  {
-    id: 10,
-    name: "Mechanical Keyboard",
-    price: 3500,
-    image: "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae",
-  },
-  {
-    id: 11,
-    name: "VR Headset",
-    price: 18000,
-    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620",
-  },
-  {
-    id: 12,
-    name: "Power Bank",
-    price: 1500,
-    image: "https://images.unsplash.com/photo-1609592806596-4d5f5c7b3b5e",
-  },
-];
+  const products = [
+    {
+      id: 1,
+      name: "সাফল্যের সিঁড়ি – ১",
+      price: 200,
+      oldPrice: 300,
+      image: "https://i.ibb.co.com/1YP0L68V/b-1.jpg",
+    },
+    {
+      id: 2,
+      name: "সাফল্যের সিঁড়ি – 2",
+      price: 200,
+      oldPrice: 350,
+      image: "https://i.ibb.co.com/xKkkC4Vd/b-3.jpg",
+    },
+    {
+      id: 3,
+      name: "রূপান্তর",
+      price: 200,
+      oldPrice: 300,
+      image: "https://i.ibb.co.com/j942w7qv/b-2.jpg",
+    },
+    {
+      id: 4,
+      name: "জীবনের ধারাপাত",
+      price: 200,
+      oldPrice: 400,
+      image: "https://i.ibb.co.com/v4QkPMzT/b-4.jpg",
+    },
+  ];
 
   const [cart, setCart] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [qty, setQty] = useState(1);
-
   const [paymentMethod, setPaymentMethod] = useState("");
   const [trxId, setTrxId] = useState("");
 
-  // Add to cart
   const addToCart = (product, quantity) => {
     const exist = cart.find((i) => i.id === product.id);
 
@@ -137,38 +88,58 @@ TRX ID: ${trxId}
 
   return (
     <div className="w-11/12 mx-auto min-h-screen bg-gray-50 p-6">
-      {/* PRODUCT GRID */}
       {!selectedProduct ? (
         <>
-          <h2 className="text-3xl font-bold mb-6">🛍️ Products</h2>
+          <h2 className="text-3xl text-center font-bold mb-6"> বইসমূহ</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((p) => (
-              <div
-                key={p.id}
-                className="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden"
-              >
-                <img
-                  src={p.image}
-                  className="h-48 w-full object-cover hover:scale-105 transition"
-                />
+            {products.map((p) => {
+              const discount = Math.round(
+                ((p.oldPrice - p.price) / p.oldPrice) * 100,
+              );
 
-                <div className="p-4">
-                  <h3 className="font-bold text-lg">{p.name}</h3>
-                  <p className="text-gray-600">৳ {p.price}</p>
+              return (
+                <div
+                  key={p.id}
+                  className="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden"
+                >
+                  <div className="relative">
+                    <img
+                      src={p.image}
+                      className="h-86 w-full object-cover bg-white"
+                    />
 
-                  <button
-                    onClick={() => {
-                      setSelectedProduct(p);
-                      setQty(1);
-                    }}
-                    className="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg"
-                  >
-                    View Details
-                  </button>
+                    {/* Discount Badge */}
+                    <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                      {discount}% OFF
+                    </span>
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">{p.name}</h3>
+
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-green-600 font-bold text-lg">
+                        ৳ {p.price}
+                      </span>
+                      <span className="text-gray-400 line-through text-sm">
+                        ৳ {p.oldPrice}
+                      </span>
+                    </div>
+
+                    <button
+                      onClick={() => {
+                        setSelectedProduct(p);
+                        setQty(1);
+                      }}
+                      className="mt-3 w-full bg-blue-600 text-white py-2 rounded-lg"
+                    >
+                      View Details
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </>
       ) : (
@@ -184,12 +155,19 @@ TRX ID: ${trxId}
 
             <img
               src={selectedProduct.image}
-              className="w-full h-60 object-cover rounded-lg"
+              className="h-90 w-full object-cover bg-white"
             />
 
             <h2 className="text-2xl font-bold mt-3">{selectedProduct.name}</h2>
 
-            <p className="text-lg text-gray-600">৳ {selectedProduct.price}</p>
+            <div className="flex items-center gap-3 mt-2">
+              <span className="text-xl font-bold text-green-600">
+                ৳ {selectedProduct.price}
+              </span>
+              <span className="text-gray-400 line-through">
+                ৳ {selectedProduct.oldPrice}
+              </span>
+            </div>
 
             <div className="flex items-center gap-3 mt-4">
               <button
@@ -251,27 +229,48 @@ TRX ID: ${trxId}
 
             <h3 className="mt-3 font-bold">Total: ৳ {total}</h3>
 
-            {/* PAYMENT */}
             {cart.length > 0 && (
               <div className="mt-5 border-t pt-4">
                 <h3 className="font-bold mb-2">💳 Payment</h3>
 
-                <p className="text-green-600 font-bold">Send to: 01785288324</p>
+                <p className="text-green-600 font-bold">
+                  Send to: +৮৮০১৩০১-৫০০৩৯৬
+                </p>
 
                 <p>Amount: ৳ {total}</p>
 
                 <div className="flex gap-2 mt-3">
-                  {["bKash", "Nagad", "Rocket"].map((m) => (
+                  {[
+                    {
+                      name: "bKash",
+                      logo: "https://i.ibb.co.com/4RQwvtRs/bkash.webp",
+                      color: "bg-pink-500 border-pink-500 text-white",
+                    },
+                    {
+                      name: "Nagad",
+                      logo: "https://i.ibb.co.com/SX2mdRYk/Nagad-1.png",
+                      color: "bg-orange-500 border-orange-500 text-white",
+                    },
+                    {
+                      name: "Rocket",
+                      logo: "https://i.ibb.co.com/DfVvnVWT/Rocket.png",
+                      color: "bg-purple-600 border-purple-600 text-white",
+                    },
+                  ].map((m) => (
                     <button
-                      key={m}
-                      onClick={() => setPaymentMethod(m)}
-                      className={`px-3 py-1 rounded ${
-                        paymentMethod === m
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-200"
+                      key={m.name}
+                      onClick={() => setPaymentMethod(m.name)}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition ${
+                        paymentMethod === m.name
+                          ? m.color
+                          : "bg-white hover:bg-gray-100 border-gray-300"
                       }`}
                     >
-                      {m}
+                      <img
+                        src={m.logo}
+                        alt={m.name}
+                        className="w-20 h-20 object-contain"
+                      />
                     </button>
                   ))}
                 </div>

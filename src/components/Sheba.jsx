@@ -25,7 +25,7 @@ const Sheba = () => {
         {/* Image (LEFT) */}
         <div className="w-full md:w-5/12 flex justify-center">
           <img
-            src="https://i.ibb.co.com/8DpB59WR/side1.jpg"
+            src="https://i.ibb.co.com/xS7StCCz/side1.jpg"
             alt="Founder"
             className="w-[90%] md:w-full max-h-[500px] rounded-lg shadow-lg object-cover"
           />
