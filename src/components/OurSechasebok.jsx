@@ -2,41 +2,41 @@ import React from "react";
 
 const OurSechasebok = () => {
   const data = [
-    {
-      id: 1,
-      name: "মনিরুল ইসলাম",
-      jila: "সিরাজগঞ্জ জেলা",
-      image: "https://i.ibb.co.com/n8RNcBzj/p1.jpg",
-    },
+    // {
+    //   id: 1,
+    //   name: "মনিরুল ইসলাম",
+    //   jila: "সিরাজগঞ্জ জেলা",
+    //   image: "https://i.ibb.co.com/n8RNcBzj/p1.jpg",
+    // },
     {
       id: 2,
-      name: "সোহেল রানা",
-      jila: "মাদারীপুর জেলা",
-      image: "https://i.ibb.co.com/3YFC4H4C/p2.jpg",
+      name: "সৌরভ দত্ত",
+      jila: "নারায়ণগঞ্জ  জেলা",
+      image: "https://i.ibb.co.com/RpXBT1g5/2.png ",
     },
-    {
-      id: 3,
-      name: "মোফাজ্জল হোসেন",
-      jila: "সিরাজগঞ্জ জেলা",
-      image: "https://i.ibb.co.com/Wp2jJ7Zn/p3.jpg",
-    },
+    // {
+    //   id: 3,
+    //   name: "মোফাজ্জল হোসেন",
+    //   jila: "সিরাজগঞ্জ জেলা",
+    //   image: "https://i.ibb.co.com/Wp2jJ7Zn/p3.jpg",
+    // },
     {
       id: 4,
       name: "ইনামুল হাসান",
       jila: "মাদারীপুর জেলা",
-      image: "https://i.ibb.co.com/SwywQtjn/p4.jpg",
+      image: "https://i.ibb.co.com/gbc30J2f/23.jpg",
     },
     {
       id: 5,
-      name: "হাসানুজ্জামান",
-      jila: "নাটোর জেলা",
-      image: "https://i.ibb.co.com/2YR7h6D9/p5.jpg",
+      name: "মোঃতমাল হোসেন",
+      jila: "মাদারীপুর  জেলা",
+      image: "https://i.ibb.co.com/cKXPNpNW/5.jpg",
     },
     {
       id: 6,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোছা: শামীমা আকতার",
+      jila: "বগুড়া  জেলা",
+      image: "https://i.ibb.co.com/4nqQYVLk/6.jpg",
     },
     {
       id: 7,
@@ -46,9 +46,9 @@ const OurSechasebok = () => {
     },
     {
       id: 8,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোঃ রাসেল আমিন",
+      jila: "মাগুরা  জেলা",
+      image: "https://i.ibb.co.com/dJ1J1SBV/8.jpg",
     },
     {
       id: 9,
@@ -56,18 +56,18 @@ const OurSechasebok = () => {
       jila: "সিলেট  জেলা",
       image: "https://i.ibb.co.com/fGnQcQcg/9.jpg",
     },
-    {
-      id: 10,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
-    },
-    {
-      id: 11,
-      name: "এ এম রিয়াজ কামাল হিরণ ",
-      jila: "চট্টগ্রাম জেলা ",
-      image: "https://i.ibb.co.com/Q3CVGxY8/A-M-Reaz-Kamal-Heron-11.jpg",
-    },
+    // {
+    //   id: 10,
+    //   name: "জহুর আলম",
+    //   jila: "বরিশাল জেলা",
+    //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+    // },
+    // {
+    //   id: 11,
+    //   name: "এ এম রিয়াজ কামাল হিরণ ",
+    //   jila: "চট্টগ্রাম জেলা ",
+    //   image: "https://i.ibb.co.com/Q3CVGxY8/A-M-Reaz-Kamal-Heron-11.jpg",
+    // },
     {
       id: 12,
       name: "রমজান আলী আবির",
@@ -76,21 +76,22 @@ const OurSechasebok = () => {
     },
     {
       id: 13,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "সুমন দেব",
+      jila: "ঠাকুরগাঁও সদর",
+      image: "https://i.ibb.co.com/ym1rr7Pr/13.jpg",
     },
-    {
-      id: 14,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
-    },
+    // {
+    //   id: 14,
+    //   name: "জহুর আলম",
+    //   jila: "বরিশাল জেলা",
+    //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+    // },
     {
       id: 15,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোঃ আরিফুল ইসলাম",
+      jila: "ঠাকুরগাঁও জেলা",
+      image:
+        "https://i.ibb.co.com/XvrFFhR/Smartly-dressed-man-with-greenery-backdrop-removebg-preview.png",
     },
     {
       id: 16,
@@ -98,12 +99,12 @@ const OurSechasebok = () => {
       jila: "বগুড়া জেলা",
       image: "https://i.ibb.co.com/PzgKS4TX/MD-ROBIUL-ISLAM-SHAKIL-16.jpg",
     },
-    {
-      id: 17,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
-    },
+    // {
+    //   id: 17,
+    //   name: "জহুর আলম",
+    //   jila: "বরিশাল জেলা",
+    //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+    // },
     {
       id: 18,
       name: "শাহাবুদ্দিন ",
@@ -118,21 +119,21 @@ const OurSechasebok = () => {
     },
     {
       id: 20,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মনিরুল ইসলাম",
+      jila: "সিরাজগঞ্জ জেলা",
+      image: "https://i.ibb.co.com/jZ516njx/Md-Monirul-Islam-20.jpg",
     },
     {
       id: 21,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "সোহেল রানা ",
+      jila: "মাদারীপুর  জেলা",
+      image: "https://i.ibb.co.com/C3345tsW/21.jpg",
     },
     {
       id: 22,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোফাজ্জল হোসেন",
+      jila: "সিরাজগঞ্জ জেলা",
+      image: "https://i.ibb.co.com/YTFYM54G/22.jpg",
     },
     {
       id: 23,
@@ -154,9 +155,9 @@ const OurSechasebok = () => {
     },
     {
       id: 26,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোছা : রিক্তা খাতুন ",
+      jila: "নাটোর  জেলা",
+      image: "https://i.ibb.co.com/0pNdTwY3/26.jpg",
     },
     {
       id: 27,
@@ -172,9 +173,9 @@ const OurSechasebok = () => {
     },
     {
       id: 29,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "রতন রায় ",
+      jila: "ফরিদপুর সদর",
+      image: "https://i.ibb.co.com/6JF9Bdxg/29.jpg",
     },
     {
       id: 30,
@@ -184,9 +185,9 @@ const OurSechasebok = () => {
     },
     {
       id: 31,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "সোনিয়া আক্তার ",
+      jila: "Habiganj",
+      image: "https://i.ibb.co.com/dJjSyy9d/31.jpg",
     },
     {
       id: 32,
@@ -202,15 +203,15 @@ const OurSechasebok = () => {
     },
     {
       id: 34,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মো: সোহেল হোসাইন। ",
+      jila: "চাঁদপুর জেলা",
+      image: "https://i.ibb.co.com/KzmsHgnF/34.jpg",
     },
     {
       id: 35,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "শাপলা আক্তার",
+      jila: "গাইবান্ধা  জেলা",
+      image: "https://i.ibb.co.com/tMb9z5SH/35.jpg",
     },
     {
       id: 36,
@@ -224,23 +225,23 @@ const OurSechasebok = () => {
       jila: "দিনাজপুর জেলা",
       image: "https://i.ibb.co.com/QvJttxqq/37.jpg",
     },
-    {
-      id: 38,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
-    },
+    // {
+    //   id: 38,
+    //   name: "জহুর আলম",
+    //   jila: "বরিশাল জেলা",
+    //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+    // },
     {
       id: 39,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মো: শাহিনুর রহমান",
+      jila: " পঞ্চগড় জেলা",
+      image: "https://i.ibb.co.com/jZ516njx/Md-Monirul-Islam-20.jpg",
     },
     {
       id: 40,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোছা: মিরা আক্তার",
+      jila: "শেরপুর  জেলা",
+      image: "https://i.ibb.co.com/6RPh5RvK/40.jpg",
     },
     {
       id: 41,
@@ -268,15 +269,15 @@ const OurSechasebok = () => {
     },
     {
       id: 45,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মো. সুমন আহমদ ",
+      jila: "সুনামগঞ্জ  জেলা",
+      image: "https://i.ibb.co.com/whmYTV60/45.jpg",
     },
     {
       id: 46,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "শাহাবুদ্দিন ",
+      jila: "কুমিল্লা  জেলা",
+      image: "https://i.ibb.co.com/N2d9HMnH/46.jpg",
     },
     {
       id: 47,
@@ -284,35 +285,35 @@ const OurSechasebok = () => {
       jila: "বরগুনা জেলা",
       image: "https://i.ibb.co.com/Q7t99BW1/47.jpg",
     },
-    {
-      id: 48,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
-    },
+    // {
+    //   id: 48,
+    //   name: "জহুর আলম",
+    //   jila: "বরিশাল জেলা",
+    //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+    // },
     {
       id: 49,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোছা:সুবর্না ইয়াসমিন ",
+      jila: "পাবনা জেলা",
+      image: "https://i.ibb.co.com/KpMPhrmd/49.jpg",
     },
     {
       id: 50,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মো. রফিকুল ইসলাম ",
+      jila: "কুমিল্লা  জেলা",
+      image: "https://i.ibb.co.com/CpF83sD7/50.png",
     },
     {
       id: 51,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মোঃ সোহেল রানা",
+      jila: "বরগুনা জেলা",
+      image: "https://i.ibb.co.com/yBWpStHC/51.jpg",
     },
     {
       id: 52,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "সুনন্দন চন্দ্র সেন ",
+      jila: "কুড়িগ্রাম  জেলা",
+      image: "https://i.ibb.co.com/pBmvFNRw/52.jpg",
     },
     {
       id: 53,
@@ -322,9 +323,9 @@ const OurSechasebok = () => {
     },
     {
       id: 54,
-      name: "জহুর আলম",
-      jila: "বরিশাল জেলা",
-      image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
+      name: "মো:রায়হান আলী",
+      jila: "চাঁপাইনবাবগঞ্জ জেলা",
+      image: "https://i.ibb.co.com/mr9Br6ZW/54.jpg",
     },
   ];
 
@@ -351,7 +352,7 @@ const OurSechasebok = () => {
 
             {/* Content */}
             <div className="p-5 text-center">
-              <h2 className="text-xl font-bold text-gray-800 group-hover:text-red-600 transition">
+              <h2 className="text-blue-700 font-bold text-xs sm:text-sm md:text-lg leading-tight break-words">
                 {person.name}
               </h2>
 

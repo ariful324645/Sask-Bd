@@ -235,141 +235,145 @@ const Course = () => {
           </div>
         </div>
       </div>
+      <div>
+        {/* Bottom Cards */}
+        <div className="grid md:grid-cols-3 gap-5 mt-10">
+          <div className="bg-white rounded-3xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-indigo-600">
+              30+ Video Lessons
+            </h3>
 
-      {/* Bottom Cards */}
-      <div className="grid md:grid-cols-3 gap-5 mt-10">
-        <div className="bg-white rounded-3xl shadow-lg p-6">
-          <h3 className="text-xl font-bold text-indigo-600">
-            30+ Video Lessons
-          </h3>
+            <p className="text-gray-600 mt-2">
+              Learn frontend & backend development with real examples.
+            </p>
+          </div>
 
-          <p className="text-gray-600 mt-2">
-            Learn frontend & backend development with real examples.
-          </p>
+          <div className="bg-white rounded-3xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-indigo-600">Real Projects</h3>
+
+            <p className="text-gray-600 mt-2">
+              Build modern MERN stack applications step by step.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-indigo-600">
+              Course Certificate
+            </h3>
+
+            <p className="text-gray-600 mt-2">
+              Receive a certificate after completing the course.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-lg p-6">
-          <h3 className="text-xl font-bold text-indigo-600">Real Projects</h3>
+        {/* CEO Section */}
+        <div className="mt-10 bg-white px-5 sm:px-8 md:px-12 lg:px-20 xl:px-36 py-10 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-6">
+          {/* Image */}
+          <img
+            src="https://i.pravatar.cc/200?img=5"
+            className="w-28 h-28 rounded-2xl object-cover"
+            alt="CEO"
+          />
 
-          <p className="text-gray-600 mt-2">
-            Build modern MERN stack applications step by step.
-          </p>
+          {/* Left Info */}
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-2xl font-bold text-purple-600">
+              CEO & Founder
+            </h2>
+
+            <h3 className="text-xl font-semibold">Farjana Akter</h3>
+
+            <p className="text-gray-500">CEO of Learn Coding Academy</p>
+
+            <span className="inline-block mt-3 bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">
+              ID: CEO-2026-LCA
+            </span>
+          </div>
+
+          {/* Right Side Description */}
+          <div className="flex-1 text-gray-600 border-t md:border-t-0 md:border-l pt-4 md:pt-0 md:pl-6">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2">
+              About Her
+            </h4>
+
+            <p className="text-sm leading-relaxed">
+              Farjana Akter is a passionate entrepreneur from Bangladesh. She
+              started her journey in the tech industry as a self-taught
+              developer and later founded <b>Learn Coding Academy</b> to help
+              students learn modern web development skills like React, Node.js,
+              and MongoDB.
+            </p>
+
+            <p className="text-sm mt-3 leading-relaxed">
+              She focuses on practical learning, real-world projects, and
+              building job-ready developers for the global IT industry.
+            </p>
+          </div>
         </div>
+        {/* Instructor Section (5 instructors) */}
+        {/* Instructor Section */}
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
+            Our Instructors
+          </h2>
 
-        <div className="bg-white rounded-3xl shadow-lg p-6">
-          <h3 className="text-xl font-bold text-indigo-600">
-            Course Certificate
-          </h3>
+          <div className="grid md:grid-cols-5 gap-4">
+            {[
+              {
+                name: "Ariful Islam",
+                role: "Full Stack Developer",
+                img: "https://i.ibb.co.com/XvrFFhR/Smartly-dressed-man-with-greenery-backdrop-removebg-preview.png",
+              },
+              {
+                name: "Sabbir Hossain",
+                role: "MERN Stack Developer",
+                img: "https://i.ibb.co.com/gFc5ZVKR/img-removebg-preview-removebg-preview-2.png",
+              },
+              {
+                name: "Rakib Hasan",
+                role: "Frontend Developer",
+                img: "https://i.ibb.co.com/F4MD7BD0/Arif.jpg",
+              },
+              {
+                name: "Farhan Ahmed",
+                role: "Backend Developer",
+                img: "https://i.ibb.co.com/PvGxb9g9/ariful-edited.jpg",
+              },
+              {
+                name: "Tamim Iqbal",
+                role: "React Specialist",
+                img: "https://i.ibb.co.com/F4MD7BD0/Arif.jpg",
+              },
+            ].map((ins, i) => (
+              <div
+                key={i}
+                className="bg-white p-5 rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300"
+              >
+                <img
+                  src={ins.img}
+                  className="w-20 h-20 mx-auto rounded-full border-4 border-indigo-100 object-cover"
+                  alt={ins.name}
+                />
 
-          <p className="text-gray-600 mt-2">
-            Receive a certificate after completing the course.
-          </p>
-        </div>
-      </div>
+                <h3 className="mt-3 font-bold text-gray-800">{ins.name}</h3>
 
-      {/* CEO Section */}
-      <div className="mt-10 bg-white px-36 py-10 rounded-3xl shadow-xl flex flex-col md:flex-row items-center gap-6">
-        {/* Image */}
-        <img
-          src="https://i.pravatar.cc/200?img=5"
-          className="w-28 h-28 rounded-2xl object-cover"
-          alt="CEO"
-        />
+                <p className="text-sm text-indigo-600 font-medium mt-1">
+                  {ins.role}
+                </p>
 
-        {/* Left Info */}
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold text-purple-600">CEO & Founder</h2>
+                <div className="mt-3 flex justify-center gap-1 flex-wrap">
+                  <span className="text-xs bg-indigo-100 text-indigo-600 px-2 py-1 rounded-full">
+                    Expert
+                  </span>
 
-          <h3 className="text-xl font-semibold">Farjana Akter</h3>
-
-          <p className="text-gray-500">CEO of Learn Coding Academy</p>
-
-          <span className="inline-block mt-3 bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">
-            ID: CEO-2026-LCA
-          </span>
-        </div>
-
-        {/* Right Side Description */}
-        <div className="flex-1 text-gray-600 border-l md:pl-6">
-          <h4 className="text-lg font-semibold text-gray-800 mb-2">
-            About Her
-          </h4>
-
-          <p className="text-sm leading-relaxed">
-            Farjana Akter is a passionate entrepreneur from Bangladesh. She
-            started her journey in the tech industry as a self-taught developer
-            and later founded <b>Learn Coding Academy</b> to help students learn
-            modern web development skills like React, Node.js, and MongoDB.
-          </p>
-
-          <p className="text-sm mt-3 leading-relaxed">
-            She focuses on practical learning, real-world projects, and building
-            job-ready developers for the global IT industry.
-          </p>
-        </div>
-      </div>
-      {/* Instructor Section (5 instructors) */}
-      {/* Instructor Section */}
-      <div className="mt-10">
-        <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
-          Our Instructors
-        </h2>
-
-        <div className="grid md:grid-cols-5 gap-4">
-          {[
-            {
-              name: "Ariful Islam",
-              role: "Full Stack Developer",
-              img: "https://i.ibb.co.com/XvrFFhR/Smartly-dressed-man-with-greenery-backdrop-removebg-preview.png",
-            },
-            {
-              name: "Sabbir Hossain",
-              role: "MERN Stack Developer",
-              img: "https://i.ibb.co.com/gFc5ZVKR/img-removebg-preview-removebg-preview-2.png",
-            },
-            {
-              name: "Rakib Hasan",
-              role: "Frontend Developer",
-              img: "https://i.ibb.co.com/F4MD7BD0/Arif.jpg",
-            },
-            {
-              name: "Farhan Ahmed",
-              role: "Backend Developer",
-              img: "https://i.ibb.co.com/PvGxb9g9/ariful-edited.jpg",
-            },
-            {
-              name: "Tamim Iqbal",
-              role: "React Specialist",
-              img: "https://i.ibb.co.com/F4MD7BD0/Arif.jpg",
-            },
-          ].map((ins, i) => (
-            <div
-              key={i}
-              className="bg-white p-5 rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300"
-            >
-              <img
-                src={ins.img}
-                className="w-20 h-20 mx-auto rounded-full border-4 border-indigo-100 object-cover"
-                alt={ins.name}
-              />
-
-              <h3 className="mt-3 font-bold text-gray-800">{ins.name}</h3>
-
-              <p className="text-sm text-indigo-600 font-medium mt-1">
-                {ins.role}
-              </p>
-
-              <div className="mt-3 flex justify-center gap-1 flex-wrap">
-                <span className="text-xs bg-indigo-100 text-indigo-600 px-2 py-1 rounded-full">
-                  Expert
-                </span>
-
-                <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full">
-                  Mentor
-                </span>
+                  <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full">
+                    Mentor
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
