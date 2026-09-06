@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Ecomerce = () => {
   const products = [
@@ -87,10 +88,10 @@ TRX ID: ${trxId}
   };
 
   return (
-    <div className="w-11/12 mx-auto min-h-screen bg-gray-50 p-6">
+    <div className="w-11/12 mx-auto min-h-screen bg-gray-50 p-6 relative">
       {!selectedProduct ? (
         <>
-          <h2 className="text-3xl text-center font-bold mb-6"> বইসমূহ</h2>
+          <h2 className="text-3xl text-center font-bold mb-6">বইসমূহ</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((p) => {
@@ -107,9 +108,9 @@ TRX ID: ${trxId}
                     <img
                       src={p.image}
                       className="h-86 w-full object-cover bg-white"
+                      alt={p.name}
                     />
 
-                    {/* Discount Badge */}
                     <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
                       {discount}% OFF
                     </span>
@@ -122,6 +123,7 @@ TRX ID: ${trxId}
                       <span className="text-green-600 font-bold text-lg">
                         ৳ {p.price}
                       </span>
+
                       <span className="text-gray-400 line-through text-sm">
                         ৳ {p.oldPrice}
                       </span>
@@ -156,6 +158,7 @@ TRX ID: ${trxId}
             <img
               src={selectedProduct.image}
               className="h-90 w-full object-cover bg-white"
+              alt={selectedProduct.name}
             />
 
             <h2 className="text-2xl font-bold mt-3">{selectedProduct.name}</h2>
@@ -164,6 +167,7 @@ TRX ID: ${trxId}
               <span className="text-xl font-bold text-green-600">
                 ৳ {selectedProduct.price}
               </span>
+
               <span className="text-gray-400 line-through">
                 ৳ {selectedProduct.oldPrice}
               </span>
@@ -293,6 +297,16 @@ TRX ID: ${trxId}
           </div>
         </div>
       )}
+
+      {/* WhatsApp Float Button */}
+      <a
+        href="https://wa.me/8801846737645"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 transition duration-300 hover:scale-110"
+      >
+        <FaWhatsapp size={32} />
+      </a>
     </div>
   );
 };
