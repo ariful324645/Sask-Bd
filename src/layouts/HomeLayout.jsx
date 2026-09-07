@@ -1,8 +1,8 @@
 import React from "react";
 
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import HeaderAbove from "../components/HeaderAbove";
+// import Header from "../components/Header";
+// import HeaderAbove from "../components/HeaderAbove";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import Sheba from "../components/Sheba";
@@ -16,16 +16,16 @@ const HomeLayout = () => {
     <div className="">
       {/* HEADER */}
       {/* Top Header */}
-      <div className="">
+      {/* <div className="">
         <div className="w-11/12 mx-auto">
           <HeaderAbove />
         </div>
-      </div>
+      </div> */}
 
       {/* Main Header */}
-      <div className="w-11/12 mx-auto">
+      {/* <div className="w-11/12 mx-auto">
         <Header />
-      </div>
+      </div> */}
       <header className=" w-full sticky top-0 z-50 bg-gray-200 shadow-sm">
         {/* ONLY NAVBAR STICKY */}
         <div className="  bg-white shadow-md">

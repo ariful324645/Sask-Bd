@@ -5,113 +5,186 @@ import { Link } from "react-router";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  // const [openMenu, setOpenMenu] = useState("");
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
-  return (
-    <div className="bg-red-600 w-full">
-      <nav className="text-white">
-        <div className="w-full flex justify-center items-center px-4 h-14 relative">
-          {/* Mobile Menu Button (left side, but doesn't break center) */}
-          <button
-            className="md:hidden absolute left-4"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-          </button>
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setOpenMenu(null);
+  };
 
-          {/* Desktop Menu (perfect center) */}
-          <ul className="hidden md:flex items-center justify-center gap-8 text-sm font-semibold">
-            <Link to="/">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+  return (
+    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip border-b border-slate-200 bg-white">
+      <nav className="w-full max-w-full overflow-x-clip">
+        {/* ============================== */}
+        {/* TOP INFORMATION BAR */}
+        {/* ============================== */}
+
+        <div className="hidden border-b border-cyan-100 bg-cyan-50 md:block">
+          <div className="mx-auto flex min-h-[32px] w-[94%] max-w-[1440px] items-center justify-between gap-3 text-[11px] font-semibold tracking-wide text-slate-600 lg:w-[92%]">
+            <p className="truncate">মানবতার সেবায় আমরা প্রতিশ্রুতিবদ্ধ</p>
+
+            <p className="hidden shrink-0 tracking-widest sm:block">
+              HUMANITY • SERVICE • CARE
+            </p>
+          </div>
+        </div>
+
+        {/* ============================== */}
+        {/* MAIN NAVBAR */}
+        {/* ============================== */}
+
+        <div className="mx-auto flex min-h-[72px] w-[94%] min-w-0 max-w-[1440px] items-center justify-between gap-3 lg:w-[92%]">
+          {/* ============================== */}
+          {/* LOGO AND WEBSITE NAME */}
+          {/* ============================== */}
+
+          <Link
+            to="/"
+            onClick={closeMobileMenu}
+            className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3"
+          >
+            {/* Clear Logo Without Shadow */}
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden bg-transparent sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+              <img
+                src="https://i.ibb.co.com/xqdR8kZJ/website-logo-e1754679330283.png"
+                alt="ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র লোগো"
+                className="h-full w-full object-contain"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+
+            {/* Website Name */}
+            <div className="hidden min-w-0 leading-tight sm:block">
+              <h1 className="truncate text-sm font-extrabold tracking-tight text-slate-800 md:text-base lg:text-lg">
+                ডাঃ শামসুল হুদা ও
+              </h1>
+
+              <p className="truncate text-[11px] font-bold tracking-wide text-cyan-600 md:text-xs lg:text-sm">
+                আঞ্জুমান আরা সেবাকেন্দ্র
+              </p>
+            </div>
+          </Link>
+
+          {/* ============================== */}
+          {/* DESKTOP MENU */}
+          {/* Only show on 2xl to prevent overlap */}
+          {/* ============================== */}
+
+          <ul className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-[12px] font-bold tracking-tight text-slate-700 2xl:flex 2xl:gap-2 2xl:text-[13px]">
+            {/* HOME */}
+            <Link to="/" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 হোম
               </li>
             </Link>
+
+            {/* ABOUT */}
             <li className="relative">
               <button
-                onClick={() => setOpenMenu(openMenu === "about" ? "" : "about")}
-                className="flex items-center gap-1 hover:text-yellow-300 transition duration-300 hover:scale-105"
+                onClick={() => toggleMenu("about")}
+                className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm"
               >
-                আমাদের সম্পর্কে <FaChevronDown size={12} />
+                আমাদের সম্পর্কে
+                <FaChevronDown
+                  size={10}
+                  className={`transition-transform duration-300 ${
+                    openMenu === "about" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               {openMenu === "about" && (
-                <ul className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black rounded shadow-md w-52 z-50 overflow-hidden">
+                <ul className="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 text-slate-800 shadow-2xl">
                   <Link to="/identity" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       প্রতিষ্ঠান পরিচিতি
                     </li>
                   </Link>
 
                   <Link to="/goal" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       লক্ষ্য ও উদ্দেশ্য
                     </li>
                   </Link>
 
                   <Link to="/income" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       আয়ের উৎস
                     </li>
                   </Link>
 
                   <Link to="/activity" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       কার্যক্রম
                     </li>
                   </Link>
 
                   <Link to="/kendriyo" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       কেন্দ্রীয় পরিচালনা পর্ষদ
                     </li>
                   </Link>
                 </ul>
               )}
             </li>
-            <Link to="OurSheba">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* SERVICES */}
+            <Link to="OurSheba" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 আমাদের সেবাসমূহ
               </li>
             </Link>
-            <Link to="allProject">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* PROJECT */}
+            <Link to="allProject" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 চলমান প্রজেক্ট
               </li>
             </Link>
-            <Link to="gallery">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* GALLERY */}
+            <Link to="gallery" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 গ্যালারি
               </li>
             </Link>
-            <Link to="video">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* VIDEO */}
+            <Link to="video" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 ভিডিও
               </li>
             </Link>
 
+            {/* VOLUNTEER */}
             <li className="relative">
               <button
-                onClick={() =>
-                  setOpenMenu(openMenu === "about1" ? "" : "about1")
-                }
-                className="flex items-center gap-1 hover:text-yellow-300 transition duration-300 hover:scale-105"
+                onClick={() => toggleMenu("about1")}
+                className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm"
               >
-                স্বেচ্ছাসেবক <FaChevronDown size={12} />
+                স্বেচ্ছাসেবক
+                <FaChevronDown
+                  size={10}
+                  className={`transition-transform duration-300 ${
+                    openMenu === "about1" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               {openMenu === "about1" && (
-                <ul className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black rounded shadow-md w-52 z-50 overflow-hidden">
+                <ul className="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 text-slate-800 shadow-2xl">
                   <Link to="" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       আমাদের স্বেচ্ছাসেবক
                     </li>
                   </Link>
+
                   <Link to="OurShechaSebok" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
+                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
                       স্বেচ্ছাসেবক নিবন্ধন
                     </li>
                   </Link>
@@ -119,132 +192,217 @@ const Navbar = () => {
               )}
             </li>
 
-            <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+            {/* CONTACT */}
+            <li className="cursor-pointer whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
               যোগাযোগ
             </li>
-            <Link to="ecomerce">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* E-COMMERCE */}
+            <Link to="ecomerce" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 ই-কমার্স
               </li>
             </Link>
-            <Link to="course">
-              <li className="cursor-pointer hover:text-yellow-300 transition duration-300 hover:scale-105">
+
+            {/* COURSE */}
+            <Link to="course" onClick={closeMobileMenu}>
+              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
                 কোর্স
               </li>
             </Link>
           </ul>
+
+          {/* ============================== */}
+          {/* ACCOUNT BUTTON */}
+          {/* ============================== */}
+
+          <button className="hidden shrink-0 rounded-lg border border-cyan-500 bg-cyan-600 px-4 py-2.5 text-[12px] font-extrabold tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-700 hover:shadow-lg hover:shadow-cyan-500/25 2xl:block">
+            আমার একাউন্ট
+          </button>
+
+          {/* ============================== */}
+          {/* MOBILE MENU BUTTON */}
+          {/* ============================== */}
+
+          <button
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-100 bg-cyan-50 text-cyan-700 transition duration-300 hover:border-cyan-300 hover:bg-cyan-100 2xl:hidden sm:h-11 sm:w-11"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <FaTimes size={19} /> : <FaBars size={19} />}
+          </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ============================== */}
+        {/* MOBILE MENU */}
+        {/* Show below 2xl */}
+        {/* ============================== */}
+
         {mobileOpen && (
-          <ul className="md:hidden flex flex-col items-center gap-3 px-4 pb-4 text-sm font-semibold">
-            <Link to="/">
-              {" "}
-              <li className="cursor-pointer hover:text-gray-200">হোম</li>
-            </Link>
-            <li className="relative">
-              <button
-                onClick={() => setOpenMenu(openMenu === "about" ? "" : "about")}
-                className="flex items-center gap-1 hover:text-yellow-300 transition duration-300 hover:scale-105"
-              >
-                আমাদের সম্পর্কে <FaChevronDown size={12} />
-              </button>
+          <div className="border-t border-slate-100 bg-white px-4 pb-6 pt-4 shadow-lg 2xl:hidden">
+            {/* Mobile Brand */}
+            <div className="mb-4 flex min-w-0 items-center gap-3 rounded-2xl border border-cyan-100 bg-gradient-to-r from-cyan-50 to-blue-50 p-3">
+              {/* Clear Mobile Logo Without Shadow */}
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-transparent">
+                <img
+                  src="https://i.ibb.co.com/xqdR8kZJ/website-logo-e1754679330283.png"
+                  alt="Logo"
+                  className="h-full w-full object-contain"
+                />
+              </div>
 
-              {openMenu === "about" && (
-                <ul className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black rounded shadow-md w-52 z-50 overflow-hidden">
-                  <Link to="/identity" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      প্রতিষ্ঠান পরিচিতি
-                    </li>
-                  </Link>
+              <div className="min-w-0">
+                <h2 className="truncate text-sm font-extrabold tracking-tight text-slate-800">
+                  ডাঃ শামসুল হুদা ও
+                </h2>
 
-                  <Link to="/goal" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      লক্ষ্য ও উদ্দেশ্য
-                    </li>
-                  </Link>
+                <p className="truncate text-xs font-bold tracking-wide text-cyan-600">
+                  আঞ্জুমান আরা সেবাকেন্দ্র
+                </p>
+              </div>
+            </div>
 
-                  <Link to="/income" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      আয়ের উৎস
-                    </li>
-                  </Link>
+            <ul className="flex flex-col gap-1 text-sm font-bold tracking-wide text-slate-800">
+              {/* HOME */}
+              <Link to="/" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  হোম
+                </li>
+              </Link>
 
-                  <Link to="/activity" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      কার্যক্রম
-                    </li>
-                  </Link>
+              {/* MOBILE ABOUT */}
+              <li>
+                <button
+                  onClick={() => toggleMenu("about")}
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600"
+                >
+                  আমাদের সম্পর্কে
+                  <FaChevronDown
+                    size={12}
+                    className={`transition-transform duration-300 ${
+                      openMenu === "about" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
 
-                  <Link to="/kendriyo" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      কেন্দ্রীয় পরিচালনা পর্ষদ
-                    </li>
-                  </Link>
-                </ul>
-              )}
-            </li>
-            <Link to="OurSheba">
-              <li className="cursor-pointer hover:text-gray-200">
-                {" "}
-                আমাদের সেবাসমূহ
+                {openMenu === "about" && (
+                  <ul className="ml-4 mt-1 rounded-xl border-l-2 border-cyan-200 bg-slate-50 p-2">
+                    <Link to="/identity" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        প্রতিষ্ঠান পরিচিতি
+                      </li>
+                    </Link>
+
+                    <Link to="/goal" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        লক্ষ্য ও উদ্দেশ্য
+                      </li>
+                    </Link>
+
+                    <Link to="/income" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        আয়ের উৎস
+                      </li>
+                    </Link>
+
+                    <Link to="/activity" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        কার্যক্রম
+                      </li>
+                    </Link>
+
+                    <Link to="/kendriyo" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        কেন্দ্রীয় পরিচালনা পর্ষদ
+                      </li>
+                    </Link>
+                  </ul>
+                )}
               </li>
-            </Link>
 
-            <Link to="allProject">
-              <li className="cursor-pointer hover:text-gray-200">
-                {" "}
-                চলমান প্রজেক্ট
+              {/* SERVICES */}
+              <Link to="OurSheba" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  আমাদের সেবাসমূহ
+                </li>
+              </Link>
+
+              {/* PROJECT */}
+              <Link to="allProject" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  চলমান প্রজেক্ট
+                </li>
+              </Link>
+
+              {/* GALLERY */}
+              <Link to="gallery" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  গ্যালারি
+                </li>
+              </Link>
+
+              {/* VIDEO */}
+              <Link to="video" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  ভিডিও
+                </li>
+              </Link>
+
+              {/* MOBILE VOLUNTEER */}
+              <li>
+                <button
+                  onClick={() => toggleMenu("about1")}
+                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600"
+                >
+                  স্বেচ্ছাসেবক
+                  <FaChevronDown
+                    size={12}
+                    className={`transition-transform duration-300 ${
+                      openMenu === "about1" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {openMenu === "about1" && (
+                  <ul className="ml-4 mt-1 rounded-xl border-l-2 border-cyan-200 bg-slate-50 p-2">
+                    <Link to="" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        আমাদের স্বেচ্ছাসেবক
+                      </li>
+                    </Link>
+
+                    <Link to="OurShechaSebok" onClick={closeMobileMenu}>
+                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                        স্বেচ্ছাসেবক নিবন্ধন
+                      </li>
+                    </Link>
+                  </ul>
+                )}
               </li>
-            </Link>
 
-            <Link to="gallery">
-              <li className="cursor-pointer hover:text-gray-200">গ্যালারি</li>
-            </Link>
+              {/* CONTACT */}
+              <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                যোগাযোগ
+              </li>
 
-            <Link to="video">
-              <li className="cursor-pointer hover:text-gray-200">ভিডিও</li>
-            </Link>
+              {/* E-COMMERCE */}
+              <Link to="ecomerce" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  ই-কমার্স
+                </li>
+              </Link>
 
-            <li className="relative">
-              <button
-                onClick={() =>
-                  setOpenMenu(openMenu === "about1" ? "" : "about1")
-                }
-                className="flex items-center gap-1 hover:text-yellow-300 transition duration-300 hover:scale-105"
-              >
-                স্বেচ্ছাসেবক <FaChevronDown size={12} />
-              </button>
-
-              {openMenu === "about1" && (
-                <ul className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black rounded shadow-md w-52 z-50 overflow-hidden">
-                  <Link to="" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      আমাদের স্বেচ্ছাসেবক
-                    </li>
-                  </Link>
-                  <Link to="OurShechaSebok" onClick={() => setOpenMenu("")}>
-                    <li className="px-4 py-3 hover:bg-indigo-100 hover:text-indigo-600 transition duration-200 cursor-pointer">
-                      স্বেচ্ছাসেবক নিবন্ধন
-                    </li>
-                  </Link>
-                </ul>
-              )}
-            </li>
-
-            <li className="cursor-pointer hover:text-gray-200">যোগাযোগ</li>
-            <Link to="ecomerce">
-              {" "}
-              <li className="cursor-pointer hover:text-gray-200">ই-কমার্স</li>
-            </Link>
-            <Link to="course">
-              {" "}
-              <li className="cursor-pointer hover:text-gray-200">কোর্স</li>
-            </Link>
-          </ul>
+              {/* COURSE */}
+              <Link to="course" onClick={closeMobileMenu}>
+                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+                  কোর্স
+                </li>
+              </Link>
+            </ul>
+          </div>
         )}
       </nav>
-    </div>
+    </header>
   );
 };
 
