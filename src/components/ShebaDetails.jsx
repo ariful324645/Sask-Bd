@@ -4,8 +4,8 @@ const ShebaDetails = () => {
 
 
   return (
-    <div className="min-h-screen ">
-      <h1 className="text-4xl font-bold text-center bg-gray-700 py-6 text-white">
+    <div className="min-h-screen  ">
+      <h1 className="text-4xl font-bold text-center bg-gray-700 rounded-lg pt-32 pb-8 text-white">
         প্রতিষ্ঠাতা পরিচালকের বার্তা
       </h1>
 

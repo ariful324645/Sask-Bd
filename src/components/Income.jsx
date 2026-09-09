@@ -3,7 +3,7 @@ import React from 'react';
 const Income = () => {
                 return (
                   <div className="min-h-screen ">
-                    <h1 className="text-4xl font-bold text-center bg-gray-700 py-6 text-white">
+                    <h1 className="text-4xl font-bold text-center bg-gray-700 pt-32 pb-8 rounded-lg text-white">
                       আয়ের উৎস
                     </h1>
 

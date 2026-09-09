@@ -5,7 +5,7 @@ const OurSheba = () => {
   const services = [
     {
       id: 1,
-      title: "শীতবস্ত্র বিতরণ কর্মসূচি",
+      title: "অসহায় ও দুঃস্থদের মানবিক সহায়তা",
       description:
         "ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্রের উদ্যোগে দেশের বিভিন্ন অঞ্চলের শীতার্ত ও দুস্থ মানুষকে শীতবস্ত্র বিতরণ করা হয়। শীতপ্রধান অঞ্চলগুলোর মধ্যে অন্যতম উত্তরবঙ্গের বিভিন্ন জেলায় উন্নতমানের শীতবস্ত্র বিতরণ করা",
       image: "https://i.ibb.co.com/wFvhbH64/img4.jpg",
@@ -48,12 +48,12 @@ const OurSheba = () => {
   ];
 
   return (
-    <div className="mt-16 w-11/12 mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
+    <div className=" ">
+      <h2 className="text-3xl font-bold text-center bg-gray-700 pt-32 pb-8 rounded-lg text-white mb-10">
         আমাদের সেবাসমূহ
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid w-11/12 mx-auto  md:grid-cols-3 gap-8">
         {services.map((service) => (
           <div
             key={service.id}

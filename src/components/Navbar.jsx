@@ -1,53 +1,62 @@
 import { useState } from "react";
-import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaBars, FaTimes, FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // ==============================
+  
+  // DROPDOWN FUNCTION
+  // ==============================
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
+  // ==============================
+  // CLOSE MOBILE MENU
+  // ==============================
   const closeMobileMenu = () => {
     setMobileOpen(false);
     setOpenMenu(null);
   };
 
+  // ==============================
+  // DESKTOP TEXT DESIGN
+  // ==============================
+  const mainTextClass =
+    "whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55] hover:shadow-md lg:px-2.5 lg:text-[15px] xl:px-3 2xl:text-[16px]";
+
+  const mainTextStyle = {
+    fontFamily: "'Noto Sans Bengali', sans-serif",
+  };
+
+  const dropdownTextClass =
+    "block w-full rounded-xl px-4 py-3 text-[16px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+
+  const mobileTextClass =
+    "block w-full rounded-xl px-4 py-3 text-[17px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+
+  const mobileDropdownTextClass =
+    "block w-full rounded-lg px-4 py-2.5 text-[16px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+
   return (
-    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip border-b border-slate-200 bg-white">
-      <nav className="w-full max-w-full overflow-x-clip">
-        {/* ============================== */}
-        {/* TOP INFORMATION BAR */}
-        {/* ============================== */}
-
-        <div className="hidden border-b border-cyan-100 bg-cyan-50 md:block">
-          <div className="mx-auto flex min-h-[32px] w-[94%] max-w-[1440px] items-center justify-between gap-3 text-[11px] font-semibold tracking-wide text-slate-600 lg:w-[92%]">
-            <p className="truncate">মানবতার সেবায় আমরা প্রতিশ্রুতিবদ্ধ</p>
-
-            <p className="hidden shrink-0 tracking-widest sm:block">
-              HUMANITY • SERVICE • CARE
-            </p>
-          </div>
-        </div>
-
-        {/* ============================== */}
-        {/* MAIN NAVBAR */}
-        {/* ============================== */}
-
-        <div className="mx-auto flex min-h-[72px] w-[94%] min-w-0 max-w-[1440px] items-center justify-between gap-3 lg:w-[92%]">
-          {/* ============================== */}
-          {/* LOGO AND WEBSITE NAME */}
-          {/* ============================== */}
-
+    <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip bg-transparent px-2 py-3 sm:px-4 lg:px-6">
+      <nav className="mx-auto w-full max-w-[1800px] overflow-visible rounded-xl border border-slate-200/80 bg-white/95 shadow-lg shadow-slate-900/10 backdrop-blur-md">
+        {/* ==============================
+            MAIN NAVBAR
+        ============================== */}
+        <div className="mx-auto flex min-h-[76px] w-full min-w-0 items-center justify-between gap-2 px-3 sm:gap-3 sm:px-4 lg:gap-4 lg:px-5 xl:px-6 2xl:px-7">
+          {/* ==============================
+              LOGO
+          ============================== */}
           <Link
             to="/"
             onClick={closeMobileMenu}
             className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3"
           >
-            {/* Clear Logo Without Shadow */}
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden bg-transparent sm:h-14 sm:w-14 lg:h-16 lg:w-16">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-transparent sm:h-14 sm:w-14 lg:h-16 lg:w-16 xl:h-[70px] xl:w-[70px] 2xl:h-20 2xl:w-20">
               <img
                 src="https://i.ibb.co.com/xqdR8kZJ/website-logo-e1754679330283.png"
                 alt="ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র লোগো"
@@ -56,175 +65,204 @@ const Navbar = () => {
                 decoding="async"
               />
             </div>
-
-            {/* Website Name */}
-            <div className="hidden min-w-0 leading-tight sm:block">
-              <h1 className="truncate text-sm font-extrabold tracking-tight text-slate-800 md:text-base lg:text-lg">
-                ডাঃ শামসুল হুদা ও
-              </h1>
-
-              <p className="truncate text-[11px] font-bold tracking-wide text-cyan-600 md:text-xs lg:text-sm">
-                আঞ্জুমান আরা সেবাকেন্দ্র
-              </p>
-            </div>
           </Link>
 
-          {/* ============================== */}
-          {/* DESKTOP MENU */}
-          {/* Only show on 2xl to prevent overlap */}
-          {/* ============================== */}
-
-          <ul className="hidden min-w-0 flex-1 items-center justify-center gap-1 text-[12px] font-bold tracking-tight text-slate-700 2xl:flex 2xl:gap-2 2xl:text-[13px]">
+          {/* ==============================
+              DESKTOP MENU
+          ============================== */}
+          <ul className="hidden min-w-0 flex-1 items-center justify-center gap-1 xl:flex xl:gap-2 2xl:gap-3">
             {/* HOME */}
             <Link to="/" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
+              <li className={mainTextClass} style={mainTextStyle}>
                 হোম
               </li>
             </Link>
 
             {/* ABOUT */}
-            <li className="relative">
+            <li className="relative shrink-0">
               <button
+                type="button"
                 onClick={() => toggleMenu("about")}
-                className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm"
+                className="flex items-center gap-0"
               >
-                আমাদের সম্পর্কে
-                <FaChevronDown
-                  size={10}
-                  className={`transition-transform duration-300 ${
+                <span className={mainTextClass} style={mainTextStyle}>
+                  আমাদের সম্পর্কে
+                </span>
+
+                <FaAngleDown
+                  size={15}
+                  className={`shrink-0 text-[#111111] transition-transform duration-300 ${
                     openMenu === "about" ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {openMenu === "about" && (
-                <ul className="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 text-slate-800 shadow-2xl">
-                  <Link to="/identity" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                <ul className="absolute left-1/2 top-full z-[100] mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl">
+                  <li>
+                    <Link
+                      to="/identity"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       প্রতিষ্ঠান পরিচিতি
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
 
-                  <Link to="/goal" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                  <li>
+                    <Link
+                      to="/goal"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       লক্ষ্য ও উদ্দেশ্য
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
 
-                  <Link to="/income" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                  <li>
+                    <Link
+                      to="/income"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       আয়ের উৎস
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
 
-                  <Link to="/activity" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                  <li>
+                    <Link
+                      to="/activity"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       কার্যক্রম
-                    </li>
-                  </Link>
-
-                  <Link to="/kendriyo" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                    </Link>
+                  </li>
+{/* 
+                  <li>
+                    <Link
+                      to="/kendriyo"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       কেন্দ্রীয় পরিচালনা পর্ষদ
-                    </li>
-                  </Link>
+                    </Link>
+                  </li> */}
                 </ul>
               )}
             </li>
 
             {/* SERVICES */}
             <Link to="OurSheba" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
+              <li className={mainTextClass} style={mainTextStyle}>
                 আমাদের সেবাসমূহ
               </li>
             </Link>
 
-            {/* PROJECT */}
-            <Link to="allProject" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
-                চলমান প্রজেক্ট
-              </li>
-            </Link>
-
-            {/* GALLERY */}
-            <Link to="gallery" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
-                গ্যালারি
-              </li>
-            </Link>
-
-            {/* VIDEO */}
-            <Link to="video" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
-                ভিডিও
-              </li>
-            </Link>
-
             {/* VOLUNTEER */}
-            <li className="relative">
+            <li className="relative shrink-0">
               <button
+                type="button"
                 onClick={() => toggleMenu("about1")}
-                className="flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm"
+                className="flex items-center gap-0"
               >
-                স্বেচ্ছাসেবক
-                <FaChevronDown
-                  size={10}
-                  className={`transition-transform duration-300 ${
+                <span className={mainTextClass} style={mainTextStyle}>
+                  স্বেচ্ছাসেবক
+                </span>
+
+                <FaAngleDown
+                  size={15}
+                  className={`shrink-0 text-[#111111] transition-transform duration-300 ${
                     openMenu === "about1" ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               {openMenu === "about1" && (
-                <ul className="absolute left-1/2 top-full z-50 mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 text-slate-800 shadow-2xl">
-                  <Link to="" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                <ul className="absolute left-1/2 top-full z-[100] mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl">
+                  <li>
+                    <Link
+                      to=""
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       আমাদের স্বেচ্ছাসেবক
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
 
-                  <Link to="OurShechaSebok" onClick={() => setOpenMenu("")}>
-                    <li className="rounded-xl px-4 py-3 font-semibold transition hover:bg-cyan-50 hover:text-cyan-600">
+                  <li>
+                    <Link
+                      to="OurShechaSebok"
+                      onClick={closeMobileMenu}
+                      className={dropdownTextClass}
+                      style={mainTextStyle}
+                    >
                       স্বেচ্ছাসেবক নিবন্ধন
-                    </li>
-                  </Link>
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
 
-            {/* CONTACT */}
-            <li className="cursor-pointer whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
-              যোগাযোগ
-            </li>
-
             {/* E-COMMERCE */}
             <Link to="ecomerce" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
+              <li className={mainTextClass} style={mainTextStyle}>
                 ই-কমার্স
               </li>
             </Link>
 
             {/* COURSE */}
             <Link to="course" onClick={closeMobileMenu}>
-              <li className="whitespace-nowrap rounded-full px-3 py-2.5 text-slate-700 transition-all duration-300 hover:bg-cyan-50 hover:text-cyan-700 hover:shadow-sm">
+              <li className={mainTextClass} style={mainTextStyle}>
                 কোর্স
               </li>
             </Link>
+
+            {/* GALLERY */}
+            <Link to="gallery" onClick={closeMobileMenu}>
+              <li className={mainTextClass} style={mainTextStyle}>
+                গ্যালারি
+              </li>
+            </Link>
+
+            {/* VIDEO */}
+            <Link to="video" onClick={closeMobileMenu}>
+              <li className={mainTextClass} style={mainTextStyle}>
+                ভিডিও
+              </li>
+            </Link>
+
+            {/* CONTACT */}
+            <li
+              className={`${mainTextClass} shrink-0 cursor-pointer`}
+              style={mainTextStyle}
+            >
+              যোগাযোগ
+            </li>
           </ul>
 
-          {/* ============================== */}
-          {/* ACCOUNT BUTTON */}
-          {/* ============================== */}
-
-          <button className="hidden shrink-0 rounded-lg border border-cyan-500 bg-cyan-600 px-4 py-2.5 text-[12px] font-extrabold tracking-wide text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-700 hover:shadow-lg hover:shadow-cyan-500/25 2xl:block">
+          {/* ==============================
+              ACCOUNT BUTTON
+          ============================== */}
+          <button
+            type="button"
+            className="hidden shrink-0 rounded-lg border border-blue-700 bg-blue-700 px-3 py-2.5 text-[14px] font-extrabold tracking-wide text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-emerald-500/25 xl:px-4 xl:text-[15px] 2xl:block"
+            style={mainTextStyle}
+          >
             আমার একাউন্ট
           </button>
 
-          {/* ============================== */}
-          {/* MOBILE MENU BUTTON */}
-          {/* ============================== */}
-
+          {/* ==============================
+              MOBILE MENU BUTTON
+          ============================== */}
           <button
+            type="button"
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-100 bg-cyan-50 text-cyan-700 transition duration-300 hover:border-cyan-300 hover:bg-cyan-100 2xl:hidden sm:h-11 sm:w-11"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
@@ -233,16 +271,13 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* ============================== */}
-        {/* MOBILE MENU */}
-        {/* Show below 2xl */}
-        {/* ============================== */}
-
+        {/* ==============================
+            MOBILE MENU
+        ============================== */}
         {mobileOpen && (
           <div className="border-t border-slate-100 bg-white px-4 pb-6 pt-4 shadow-lg 2xl:hidden">
-            {/* Mobile Brand */}
+            {/* MOBILE BRAND */}
             <div className="mb-4 flex min-w-0 items-center gap-3 rounded-2xl border border-cyan-100 bg-gradient-to-r from-cyan-50 to-blue-50 p-3">
-              {/* Clear Mobile Logo Without Shadow */}
               <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-transparent">
                 <img
                   src="https://i.ibb.co.com/xqdR8kZJ/website-logo-e1754679330283.png"
@@ -252,34 +287,49 @@ const Navbar = () => {
               </div>
 
               <div className="min-w-0">
-                <h2 className="truncate text-sm font-extrabold tracking-tight text-slate-800">
+                <h2
+                  className="truncate text-[16px] font-extrabold tracking-wide text-[#111111]"
+                  style={mainTextStyle}
+                >
                   ডাঃ শামসুল হুদা ও
                 </h2>
 
-                <p className="truncate text-xs font-bold tracking-wide text-cyan-600">
+                <p
+                  className="truncate text-[15px] font-extrabold tracking-wide text-[#111111]"
+                  style={mainTextStyle}
+                >
                   আঞ্জুমান আরা সেবাকেন্দ্র
                 </p>
               </div>
             </div>
 
-            <ul className="flex flex-col gap-1 text-sm font-bold tracking-wide text-slate-800">
+            <ul className="flex flex-col gap-1">
               {/* HOME */}
-              <Link to="/" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="/"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   হোম
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* MOBILE ABOUT */}
               <li>
                 <button
+                  type="button"
                   onClick={() => toggleMenu("about")}
-                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600"
+                  className="flex w-full items-center justify-between"
                 >
-                  আমাদের সম্পর্কে
+                  <span className={mobileTextClass} style={mainTextStyle}>
+                    আমাদের সম্পর্কে
+                  </span>
+
                   <FaChevronDown
                     size={12}
-                    className={`transition-transform duration-300 ${
+                    className={`mr-4 text-[#111111] transition-transform duration-300 ${
                       openMenu === "about" ? "rotate-180" : ""
                     }`}
                   />
@@ -287,77 +337,126 @@ const Navbar = () => {
 
                 {openMenu === "about" && (
                   <ul className="ml-4 mt-1 rounded-xl border-l-2 border-cyan-200 bg-slate-50 p-2">
-                    <Link to="/identity" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to="/identity"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         প্রতিষ্ঠান পরিচিতি
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
 
-                    <Link to="/goal" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to="/goal"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         লক্ষ্য ও উদ্দেশ্য
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
 
-                    <Link to="/income" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to="/income"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         আয়ের উৎস
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
 
-                    <Link to="/activity" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to="/activity"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         কার্যক্রম
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
 
-                    <Link to="/kendriyo" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    {/* <li>
+                      <Link
+                        to="/kendriyo"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         কেন্দ্রীয় পরিচালনা পর্ষদ
-                      </li>
-                    </Link>
+                      </Link>
+                    </li> */}
                   </ul>
                 )}
               </li>
 
               {/* SERVICES */}
-              <Link to="OurSheba" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="OurSheba"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   আমাদের সেবাসমূহ
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* PROJECT */}
-              <Link to="allProject" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="allProject"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   চলমান প্রজেক্ট
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* GALLERY */}
-              <Link to="gallery" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="gallery"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   গ্যালারি
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* VIDEO */}
-              <Link to="video" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="video"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   ভিডিও
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* MOBILE VOLUNTEER */}
               <li>
                 <button
+                  type="button"
                   onClick={() => toggleMenu("about1")}
-                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600"
+                  className="flex w-full items-center justify-between"
                 >
-                  স্বেচ্ছাসেবক
+                  <span className={mobileTextClass} style={mainTextStyle}>
+                    স্বেচ্ছাসেবক
+                  </span>
+
                   <FaChevronDown
                     size={12}
-                    className={`transition-transform duration-300 ${
+                    className={`mr-4 text-[#111111] transition-transform duration-300 ${
                       openMenu === "about1" ? "rotate-180" : ""
                     }`}
                   />
@@ -365,39 +464,59 @@ const Navbar = () => {
 
                 {openMenu === "about1" && (
                   <ul className="ml-4 mt-1 rounded-xl border-l-2 border-cyan-200 bg-slate-50 p-2">
-                    <Link to="" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to=""
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         আমাদের স্বেচ্ছাসেবক
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
 
-                    <Link to="OurShechaSebok" onClick={closeMobileMenu}>
-                      <li className="rounded-lg px-4 py-2.5 transition hover:bg-cyan-50 hover:text-cyan-600">
+                    <li>
+                      <Link
+                        to="OurShechaSebok"
+                        onClick={closeMobileMenu}
+                        className={mobileDropdownTextClass}
+                        style={mainTextStyle}
+                      >
                         স্বেচ্ছাসেবক নিবন্ধন
-                      </li>
-                    </Link>
+                      </Link>
+                    </li>
                   </ul>
                 )}
               </li>
 
               {/* CONTACT */}
-              <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li className={mobileTextClass} style={mainTextStyle}>
                 যোগাযোগ
               </li>
 
               {/* E-COMMERCE */}
-              <Link to="ecomerce" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="ecomerce"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   ই-কমার্স
-                </li>
-              </Link>
+                </Link>
+              </li>
 
               {/* COURSE */}
-              <Link to="course" onClick={closeMobileMenu}>
-                <li className="rounded-xl px-4 py-3 transition hover:bg-cyan-50 hover:text-cyan-600">
+              <li>
+                <Link
+                  to="course"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                  style={mainTextStyle}
+                >
                   কোর্স
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
           </div>
         )}

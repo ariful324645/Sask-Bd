@@ -3,7 +3,7 @@ import React from 'react';
 const Identity = () => {
                 return (
                   <div className="min-h-screen ">
-                    <h1 className="text-4xl font-bold text-center bg-gray-700 py-6 text-white">
+                    <h1 className="text-4xl font-bold text-center bg-gray-700 pt-32 rounded-lg pb-8 text-white">
                       প্রতিষ্ঠান পরিচিতি
                     </h1>
 

@@ -26,18 +26,15 @@ const HomeLayout = () => {
       {/* <div className="w-11/12 mx-auto">
         <Header />
       </div> */}
-      <header className=" w-full sticky top-0 z-50 bg-gray-200 shadow-sm">
-        {/* ONLY NAVBAR STICKY */}
-        <div className="  bg-white shadow-md">
-          <div className=" w-full mx-auto">
-            <Navbar />
-          </div>
+      <header className="absolute left-0 top-0 z-50 mt-0 w-full translate-y-1 px-3 shadow-sm sm:px-4 md:px-5 lg:px-6">
+        <div className="mx-auto w-full max-w-[1850px]">
+          <Navbar />
         </div>
       </header>
 
       {/* MAIN CONTENT */}
-      <main>
-        <Outlet></Outlet>
+      <main className="min-h-screen  text-white">
+        <Outlet />
       </main>
 
       {/* FOOTER */}

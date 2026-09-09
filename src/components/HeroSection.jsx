@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[450px] w-full overflow-hidden sm:min-h-[500px] md:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px]">
+    <section className="relative min-h-[350px] w-full overflow-hidden sm:min-h-[400px] md:min-h-[450px] lg:min-h-[500px] xl:min-h-[550px]">
       {/* ============================== */}
       {/* BACKGROUND IMAGE SLIDER */}
       {/* ============================== */}
@@ -47,46 +47,60 @@ const HeroSection = () => {
       ))}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25"></div>
 
       {/* ============================== */}
       {/* HERO CONTENT */}
       {/* ============================== */}
-
-      <div className="relative z-10 mx-auto flex min-h-[500px] w-11/12 max-w-7xl items-center sm:min-h-[550px] md:min-h-[650px] lg:min-h-[700px] xl:min-h-[750px]">
-        <div className="max-w-2xl text-left text-white">
+      <div className="relative z-10 mx-auto flex min-h-[520px] w-11/12 max-w-7xl items-center py-20 sm:min-h-[560px] sm:py-24 md:min-h-[600px] md:py-28 lg:min-h-[650px] lg:py-32 xl:min-h-[750px]">
+        <div className="w-full max-w-4xl text-left text-white">
           {/* Main Heading */}
-          <h1 className="text-xl font-extrabold leading-[1.3] tracking-tight text-white sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl">
-         
-            <span className="mt-2 block font-bold text-white/90">
+          <h1
+            className="text-2xl font-extrabold leading-[1.5] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]"
+            style={{
+              fontFamily: "'Noto Serif Bengali', serif",
+              textShadow: "2px 3px 8px rgba(0, 0, 0, 0.75)",
+            }}
+          >
+            <span className="block font-extrabold text-white">
               ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
             </span>
           </h1>
 
           {/* Description */}
-          <p className="mt-4 max-w-xl text-sm font-normal leading-6 tracking-wide text-white/80 sm:mt-5 sm:text-base sm:leading-7 md:mt-6 md:text-lg md:leading-8 lg:text-xl">
-            ভালোবাসা, সহমর্মিতা ও সেবার মাধ্যমে মানুষের পাশে দাঁড়ানোই আমাদের
-            অঙ্গীকার। একটি সুন্দর, মানবিক ও কল্যাণময় সমাজ গড়তে আমরা কাজ করে
-            যাচ্ছি।
+          <p
+            className="mt-5 max-w-3xl text-sm font-medium leading-8 tracking-wide text-white sm:mt-6 sm:text-base sm:leading-9 md:mt-7 md:text-lg md:leading-10 lg:text-xl lg:leading-[1.9]"
+            style={{
+              fontFamily: "'Noto Serif Bengali', serif",
+              textShadow: "1px 2px 5px rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র একটি অরাজনৈতিক, অলাভজনক ও
+            মানবকল্যাণমূলক প্রতিষ্ঠান। মানুষের কল্যাণে নিবেদিত সেবামূলক
+            কার্যক্রমের মাধ্যমে একটি সুন্দর, মানবিক ও কল্যাণময় সমাজ গড়তে আমরা
+            কাজ করে যাচ্ছি।
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-7 sm:gap-4 md:mt-8">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4 md:mt-9">
             {/* More Info Button */}
-            <button className="group flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-normal tracking-wide text-black transition-all duration-300 hover:-translate-y-1 hover:bg-gray-200 sm:gap-3 sm:px-7 sm:py-3.5 sm:text-base">
+            <button
+              type="button"
+              className="flex h-12 w-full items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-5 py-3 text-sm font-extrabold tracking-wide text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/25 sm:w-[150px] sm:text-[15px]"
+            >
               আরও জানুন
-              <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1 sm:text-sm" />
             </button>
 
             {/* Activities Button */}
-            <button className="flex items-center gap-2 rounded-full border border-white/70 bg-white/10 px-5 py-3 text-sm font-normal tracking-wide text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black sm:gap-3 sm:px-7 sm:py-3.5 sm:text-base">
-              <FaPlay className="text-[10px] sm:text-xs" />
-              আমাদের কার্যক্রম
+            <button
+              type="button"
+              className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border-2 border-blue-700 bg-transparent px-7 py-3 text-base font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:text-white sm:w-[150px]"
+            >
+              কার্যক্রমসমূহ
             </button>
           </div>
         </div>
       </div>
-
       {/* ============================== */}
       {/* SLIDER DOTS */}
       {/* ============================== */}
