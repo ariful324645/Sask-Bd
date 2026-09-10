@@ -17,7 +17,7 @@ const Sheba = () => {
   };
 
   return (
-    <section className="relative w-11/12 mx-auto overflow-hidden bg-[#f8f7f1] py-6 mt-10 ">
+    <section className="relative w-11/12 mx-auto overflow-hidden bg-[#f8f7f1] py-6 mt-6 ">
       {/* Decorative Background */}
       <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#e8d9ad]/20 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#d9e5ee]/40 blur-3xl"></div>

@@ -225,26 +225,29 @@ const Navbar = () => {
             </Link>
 
             {/* GALLERY */}
-            <Link to="gallery" onClick={closeMobileMenu}>
+            <Link to="gallery1" onClick={closeMobileMenu}>
               <li className={mainTextClass} style={mainTextStyle}>
                 গ্যালারি
               </li>
             </Link>
 
             {/* VIDEO */}
-            <Link to="video" onClick={closeMobileMenu}>
+            <Link to="video1" onClick={closeMobileMenu}>
               <li className={mainTextClass} style={mainTextStyle}>
                 ভিডিও
               </li>
             </Link>
 
             {/* CONTACT */}
-            <li
-              className={`${mainTextClass} shrink-0 cursor-pointer`}
-              style={mainTextStyle}
-            >
-              যোগাযোগ
-            </li>
+            <Link to="communication">
+              {" "}
+              <li
+                className={`${mainTextClass} shrink-0 cursor-pointer`}
+                style={mainTextStyle}
+              >
+                যোগাযোগ
+              </li>
+            </Link>
           </ul>
 
           {/* ==============================

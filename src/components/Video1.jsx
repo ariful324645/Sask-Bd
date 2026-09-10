@@ -1,6 +1,6 @@
 import React from "react";
 
-const Video = () => {
+const Video1 = () => {
 const videos = [
   {
     id: 1,
@@ -37,19 +37,19 @@ const videos = [
 ];
 
   return (
-    <div className=" w-11/12 mx-auto my-8  px-4">
-      <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
+    <div className="  ">
+      <h1 className="text-4xl font-bold text-center bg-gray-700  mb-6 pt-32 pb-8 rounded-lg text-white">
         ভিডিও
-      </h2>
+      </h1>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid w-11/12 mx-auto md:grid-cols-3 gap-8">
         {videos.map((video) => (
           <div
             key={video.id}
             className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
           >
             {/* Video */}
-            <div  className="w-full h-56">
+            <div className="w-full h-56">
               <iframe
                 className="w-full h-full"
                 src={video.url}
@@ -72,4 +72,4 @@ const videos = [
   );
 };
 
-export default Video;
+export default Video1;

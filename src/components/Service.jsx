@@ -46,7 +46,7 @@ const Service = () => {
   ];
 
   return (
-    <div className="mt-16 w-11/12 mx-auto px-4">
+    <div className="mt-10 w-11/12 mx-auto px-4">
       <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
         আমাদের সেবাসমূহ
       </h2>

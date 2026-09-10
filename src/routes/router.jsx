@@ -10,8 +10,7 @@ import Goal from "../components/Goal";
 import Income from "../components/Income";
 import Activity from "../components/Activity";
 import Kendriyo from "../components/Kendriyo";
-import Video from "../components/Video";
-import Gallery from "../components/Gallery";
+
 import Service from "../components/Service";
 import AllProject from "../components/AllProject";
 import OurSheba from "../components/OurSheba";
@@ -19,6 +18,9 @@ import OurSechasebok from "../components/OurSechasebok";
 import Ecomerce from "../components/Ecomerce";
 import Course from "../components/Course";
 import SsNibondhon from "../components/SsNibondhon";
+import Gallery1 from "../components/Gallery1";
+import Video1 from "../components/Video1";
+import Communication from "../components/Communication";
 
 const router = createBrowserRouter([
   {
@@ -58,12 +60,12 @@ const router = createBrowserRouter([
         element: <Kendriyo></Kendriyo>,
       },
       {
-        path: "video", // ✅ fixed
-        element: <Video></Video>,
+        path: "video1", // ✅ fixed
+        element: <Video1></Video1>,
       },
       {
-        path: "gallery", // ✅ fixed
-        element: <Gallery></Gallery>,
+        path: "gallery1", // ✅ fixed
+        element: <Gallery1></Gallery1>,
       },
       {
         path: "allProject", // ✅ fixed
@@ -88,6 +90,10 @@ const router = createBrowserRouter([
       {
         path: "ssNibondhon", // ✅ fixed
         element: <SsNibondhon></SsNibondhon>,
+      },
+      {
+        path: "communication", // ✅ fixed
+        element:<Communication></Communication>,
       },
     ],
   },
