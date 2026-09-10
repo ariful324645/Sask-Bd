@@ -33,7 +33,7 @@ const HomeLayout = () => {
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="min-h-screen  text-white">
+      <main className="min-h-screen bg-gray-50 rounded-lg pb-4  text-white">
         <Outlet />
       </main>
 

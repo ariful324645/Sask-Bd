@@ -331,7 +331,7 @@ const OurSechasebok = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-center bg-gray-700 py-6 text-white">
+      <h1 className="text-4xl font-bold text-center bg-gray-700 pt-32 rounded-lg pb-8 text-white">
         স্বেচ্ছাসেবক তালিকা
       </h1>
 

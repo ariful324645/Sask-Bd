@@ -171,7 +171,7 @@ const Footer = () => {
 
           <div className="mt-2 flex gap-3">
             <a
-              href="https://facebook.com"
+              href="https://web.facebook.com/profile.php?id=100094222038622&rdid=OT4mb5yEqnp4uRzQ&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1BovMX3JYb%2F%3F_rdc%3D1%26_rdr#"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -181,17 +181,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 text-white shadow-lg shadow-cyan-500/20 transition duration-300 hover:-translate-y-1 hover:scale-105"
-            >
-              <FaFacebookF />
-            </a>
-
-            <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@dr.rebekasultana5160"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"

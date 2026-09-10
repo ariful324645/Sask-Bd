@@ -18,6 +18,7 @@ import OurSheba from "../components/OurSheba";
 import OurSechasebok from "../components/OurSechasebok";
 import Ecomerce from "../components/Ecomerce";
 import Course from "../components/Course";
+import SsNibondhon from "../components/SsNibondhon";
 
 const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
       {
         path: "course", // ✅ fixed
         element: <Course></Course>,
+      },
+      {
+        path: "ssNibondhon", // ✅ fixed
+        element: <SsNibondhon></SsNibondhon>,
       },
     ],
   },

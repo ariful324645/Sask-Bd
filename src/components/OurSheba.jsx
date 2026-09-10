@@ -53,7 +53,7 @@ const OurSheba = () => {
         আমাদের সেবাসমূহ
       </h2>
 
-      <div className="grid w-11/12 mx-auto  md:grid-cols-3 gap-8">
+      <div className="grid w-11/12 mx-auto pb-8 md:grid-cols-3 gap-8">
         {services.map((service) => (
           <div
             key={service.id}

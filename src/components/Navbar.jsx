@@ -142,7 +142,7 @@ const Navbar = () => {
                       কার্যক্রম
                     </Link>
                   </li>
-{/* 
+                  {/* 
                   <li>
                     <Link
                       to="/kendriyo"
@@ -187,7 +187,7 @@ const Navbar = () => {
                 <ul className="absolute left-1/2 top-full z-[100] mt-3 w-56 -translate-x-1/2 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-2xl">
                   <li>
                     <Link
-                      to=""
+                      to="OurShechaSebok"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
                       style={mainTextStyle}
@@ -195,14 +195,14 @@ const Navbar = () => {
                       আমাদের স্বেচ্ছাসেবক
                     </Link>
                   </li>
-
                   <li>
                     <Link
-                      to="OurShechaSebok"
+                      to="ssNibondhon"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
                       style={mainTextStyle}
                     >
+                      {" "}
                       স্বেচ্ছাসেবক নিবন্ধন
                     </Link>
                   </li>
@@ -466,7 +466,7 @@ const Navbar = () => {
                   <ul className="ml-4 mt-1 rounded-xl border-l-2 border-cyan-200 bg-slate-50 p-2">
                     <li>
                       <Link
-                        to=""
+                        to="OurShechaSebok"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
                         style={mainTextStyle}
@@ -474,10 +474,9 @@ const Navbar = () => {
                         আমাদের স্বেচ্ছাসেবক
                       </Link>
                     </li>
-
                     <li>
                       <Link
-                        to="OurShechaSebok"
+                        to=""
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
                         style={mainTextStyle}
