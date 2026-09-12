@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const Service = () => {
-  const OurSheba = [
+  const services = [
     {
       id: 1,
       title: "অসহায় ও দুঃস্থদের মানবিক সহায়তা",
@@ -99,4 +99,4 @@ const Service = () => {
   );
 };
 
-export default OurSheba;
+export default Service;
