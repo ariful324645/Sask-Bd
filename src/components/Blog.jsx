@@ -8,6 +8,7 @@ import {
   BookOpen,
   Share2,
 } from "lucide-react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Blog = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -90,13 +91,13 @@ const Blog = () => {
       detailImages: [
         "https://i.ibb.co.com/PsD7fCG9/image1.jpg",
 
-        "https://i.ibb.co.com/1Y7wkxsC/image2.jpg",
+        "https://i.ibb.co.com/TBpMFsKv/r1.jpg",
 
         "https://i.ibb.co.com/DDDSBrZJ/image3.jpg",
 
-        "https://i.ibb.co.com/9XBtKK3/image-4.jpg",
+        "https://i.ibb.co.com/ksbnLS84/r2.jpg",
         "https://i.ibb.co.com/FkkTB5ZX/miss-image.jpg",
-        "https://i.ibb.co.com/7NZqrGZH/image5.jpg",
+        "https://i.ibb.co.com/MDJwyvBy/r3.jpg",
       ],
 
       detailSections: [
@@ -437,10 +438,7 @@ const Blog = () => {
                       onClick={closeBlog}
                       className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-7 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:bg-blue-800 hover:shadow-xl"
                     >
-                      <ArrowLeft
-                        size={17}
-                        className="transition-transform duration-300 group-hover:-translate-x-1"
-                      />
+                      <FaArrowLeft size={15} />
                       সব ব্লগ
                     </button>
                   </div>
@@ -507,10 +505,7 @@ const Blog = () => {
                       onClick={closeBlog}
                       className="group inline-flex items-center gap-2 rounded-xl bg-blue-700 px-7 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:bg-blue-800 hover:shadow-xl"
                     >
-                      <ArrowLeft
-                        size={17}
-                        className="transition-transform duration-300 group-hover:-translate-x-1"
-                      />
+                      <FaArrowLeft size={15} />
                       সব ব্লগ
                     </button>
                   </div>
@@ -595,7 +590,7 @@ const Blog = () => {
               <input
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="গল্প খুঁজুন..."
+                placeholder="ব্লগ খুঁজুন..."
                 className="w-full bg-transparent px-3 text-sm text-gray-900 outline-none placeholder:text-gray-400"
               />
             </div>
@@ -678,7 +673,7 @@ const Blog = () => {
                   <div className="border-t border-gray-100 pt-6">
                     <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-xs font-bold text-white transition-all duration-300 group-hover:bg-blue-800">
                       বিস্তারিত
-                      <ArrowRight size={15} />
+                      <FaArrowRight size={15} />
                     </span>
                   </div>
                 </div>
@@ -755,7 +750,7 @@ const Blog = () => {
                             <div className="mt-auto border-t border-gray-100 pt-6">
                               <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-xs font-bold text-white shadow-md">
                                 বিস্তারিত
-                                <ArrowRight size={15} />
+                                <FaArrowRight size={15} />
                               </span>
                             </div>
                           </div>
@@ -781,7 +776,7 @@ const Blog = () => {
               </div>
 
               <h3 className="mt-5 text-xl font-black text-gray-900">
-                কোনো গল্প পাওয়া যায়নি
+                কোনো ব্লগ পাওয়া যায়নি
               </h3>
 
               <p className="mt-2 text-sm text-gray-500">
@@ -795,7 +790,7 @@ const Blog = () => {
                 }}
                 className="mt-5 rounded-xl bg-blue-700 px-5 py-3 text-xs font-bold text-white transition hover:bg-blue-800"
               >
-                সব গল্প দেখুন
+                সব ব্লগ দেখুন
               </button>
             </div>
           </div>
