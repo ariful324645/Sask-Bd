@@ -21,6 +21,7 @@ import SsNibondhon from "../components/SsNibondhon";
 import Gallery1 from "../components/Gallery1";
 import Video1 from "../components/Video1";
 import Communication from "../components/Communication";
+import Blog from "../components/Blog";
 
 const router = createBrowserRouter([
   {
@@ -93,7 +94,11 @@ const router = createBrowserRouter([
       },
       {
         path: "communication", // ✅ fixed
-        element:<Communication></Communication>,
+        element: <Communication></Communication>,
+      },
+      {
+        path: "blog", // ✅ fixed
+        element: <Blog></Blog>,
       },
     ],
   },

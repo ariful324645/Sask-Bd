@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Column 1 */}
         <div className="rounded-2xl border border-blue-300/15 bg-white/[0.07] p-6 shadow-xl backdrop-blur-sm">
           <h2 className="mb-4 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-xl font-extrabold text-transparent">
-            সেবাকেন্দ্রের নাম
+            ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
           </h2>
 
           <div className="mb-5 h-1 w-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"></div>
@@ -112,7 +112,7 @@ const Footer = () => {
         {/* Column 2 */}
         <div className="rounded-2xl border border-blue-300/15 bg-white/[0.07] p-6 shadow-xl backdrop-blur-sm">
           <h2 className="mb-4 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-xl font-extrabold text-transparent">
-            সেবাকেন্দ্রের যোগাযোগ
+            যোগাযোগ
           </h2>
 
           <div className="mb-5 h-1 w-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"></div>
@@ -206,7 +206,8 @@ const Footer = () => {
       {/* Bottom */}
       <div className="relative mx-auto mt-12 max-w-7xl border-t border-blue-200/15 px-6 pt-6 text-center">
         <p className="text-sm text-blue-100">
-          © ২০২৬ সেবাকেন্দ্রের নাম। সর্বস্বত্ব সংরক্ষিত।
+          © ২০২৬ ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র। সর্বস্বত্ব
+          সংরক্ষিত।
         </p>
       </div>
     </footer>

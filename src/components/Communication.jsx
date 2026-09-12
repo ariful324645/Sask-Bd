@@ -98,15 +98,15 @@ const Communication = () => {
       {/* =====================================================
           HERO
       ====================================================== */}
-      <div className="relative overflow-hidden bg-gray-700">
+      <div className="relative rounded-lg overflow-hidden bg-gray-700">
         <div className="absolute -right-28 -top-28 h-[420px] w-[420px] rounded-full border-[70px] border-blue-400/10" />
 
         <div className="absolute -bottom-40 -left-32 h-[430px] w-[430px] rounded-full border-[70px] border-white/5" />
 
         <div className="absolute right-[12%] top-1/2 hidden -translate-y-1/2 lg:block">
-          <div className="flex h-48 w-48 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
-            <div className="flex h-32 w-32 items-center justify-center rounded-full border border-blue-400/20 bg-blue-500/10">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-600/20">
+          <div className="flex h-30 w-30 pt-6 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-400/20 bg-blue-500/10">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600/20">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-9 w-9 text-blue-400"
@@ -126,20 +126,10 @@ const Communication = () => {
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-24 lg:py-28">
-          <h1 className="max-w-3xl text-4xl font-black mt-4 pt-10 leading-[1.12] tracking-tight text-white md:text-3xl lg:text-4xl">
-            আপনার কথা,
-            <br />
-            <span className="relative inline-block text-blue-400">
-              আমাদের কাছে গুরুত্বপূর্ণ
-            </span>
+        <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-16 lg:pt-32 pb-6">
+          <h1 className="text-4xl font-bold text-center  text-white">
+            যোগাযোগ
           </h1>
-
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-200 md:text-base md:leading-8">
-            কোনো তথ্য জানতে, পরামর্শ দিতে অথবা আমাদের কার্যক্রম সম্পর্কে জানতে
-            আমাদের সাথে যোগাযোগ করুন। আপনার প্রয়োজনীয় বিষয়টি আমাদের জানাতে নিচের
-            মাধ্যমগুলো ব্যবহার করুন।
-          </p>
         </div>
       </div>
 
@@ -151,15 +141,15 @@ const Communication = () => {
           {/* PHONE */}
           <a
             href={`tel:${phone}`}
-            className="group relative overflow-hidden border-b border-gray-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40 md:border-b-0 md:border-r"
+            className="group relative overflow-hidden border-b border-gray-100 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40 md:border-b-0 md:border-r"
           >
-            <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-32 group-hover:w-32" />
+            <div className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-28 group-hover:w-28" />
 
-            <div className="relative flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
+            <div className="relative flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
                 <svg
                   viewBox="0 0 24 24"
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.8"
@@ -173,11 +163,11 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-lg font-medium text-gray-500">
+                <p className="text-sm font-medium text-gray-500">
                   ফোনে যোগাযোগ
                 </p>
 
-                <p className="mt-1 truncate text-base font-bold text-gray-900">
+                <p className="mt-0.5 truncate text-sm font-bold text-gray-900">
                   {phone}
                 </p>
               </div>
@@ -187,15 +177,15 @@ const Communication = () => {
           {/* EMAIL */}
           <a
             href={`mailto:${email}`}
-            className="group relative overflow-hidden border-b border-gray-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40 md:border-b-0 md:border-r"
+            className="group relative overflow-hidden border-b border-gray-100 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40 md:border-b-0 md:border-r"
           >
-            <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-32 group-hover:w-32" />
+            <div className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-28 group-hover:w-28" />
 
-            <div className="relative flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
+            <div className="relative flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
                 <svg
                   viewBox="0 0 24 24"
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.8"
@@ -210,11 +200,11 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-lg font-medium text-gray-500">
+                <p className="text-sm font-medium text-gray-500">
                   ই-মেইলে যোগাযোগ
                 </p>
 
-                <p className="mt-1 truncate text-base font-bold text-gray-900">
+                <p className="mt-0.5 truncate text-sm font-bold text-gray-900">
                   {email}
                 </p>
               </div>
@@ -226,15 +216,15 @@ const Communication = () => {
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40"
+            className="group relative overflow-hidden bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50/40"
           >
-            <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-32 group-hover:w-32" />
+            <div className="absolute -right-8 -top-8 h-20 w-20 rounded-full bg-blue-600/5 transition-all duration-500 group-hover:h-28 group-hover:w-28" />
 
-            <div className="relative flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
+            <div className="relative flex items-center gap-3">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-700 transition-all duration-300 group-hover:bg-blue-700 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-700/25">
                 <svg
                   viewBox="0 0 24 24"
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.8"
@@ -249,11 +239,11 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-lg font-medium text-gray-500">
+                <p className="text-sm font-medium text-gray-500">
                   আমাদের ঠিকানা
                 </p>
 
-                <p className="mt-1 text-base font-bold text-gray-900">
+                <p className="mt-0.5 line-clamp-1 text-sm font-bold text-gray-900">
                   ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
                 </p>
               </div>
@@ -784,8 +774,6 @@ const Communication = () => {
         <div className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-20">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-             
-
               <h2 className="text-2xl font-black tracking-tight text-gray-900 md:text-2xl">
                 আমাদের অবস্থান
               </h2>

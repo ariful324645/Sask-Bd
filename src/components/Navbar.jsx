@@ -237,7 +237,16 @@ const Navbar = () => {
                 ভিডিও
               </li>
             </Link>
-
+            {/* blog */}
+            <Link to="blog">
+              {" "}
+              <li
+                className={`${mainTextClass} shrink-0 cursor-pointer`}
+                style={mainTextStyle}
+              >
+                ব্লগ
+              </li>
+            </Link>
             {/* CONTACT */}
             <Link to="communication">
               {" "}
@@ -289,7 +298,7 @@ const Navbar = () => {
                 />
               </div>
 
-              <div className="min-w-0">
+              <div className="min-w-0 ">
                 <h2
                   className="truncate text-[16px] font-extrabold tracking-wide text-[#111111]"
                   style={mainTextStyle}
@@ -425,7 +434,7 @@ const Navbar = () => {
               {/* GALLERY */}
               <li>
                 <Link
-                  to="gallery"
+                  to="gallery1"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
                   style={mainTextStyle}
@@ -437,7 +446,7 @@ const Navbar = () => {
               {/* VIDEO */}
               <li>
                 <Link
-                  to="video"
+                  to="video1"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
                   style={mainTextStyle}
@@ -491,10 +500,19 @@ const Navbar = () => {
                 )}
               </li>
 
+          
+              <Link to="blog">
+                <li className={mobileTextClass} style={mainTextStyle}>
+                  ব্লগ
+                </li>
+              </Link>
+
               {/* CONTACT */}
-              <li className={mobileTextClass} style={mainTextStyle}>
-                যোগাযোগ
-              </li>
+              <Link to="communication">
+                <li className={mobileTextClass} style={mainTextStyle}>
+                  যোগাযোগ
+                </li>
+              </Link>
 
               {/* E-COMMERCE */}
               <li>

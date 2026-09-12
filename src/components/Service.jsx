@@ -7,7 +7,7 @@ const Service = () => {
       id: 1,
       title: "অসহায় ও দুঃস্থদের মানবিক সহায়তা",
       description:
-        "হঠাৎ কোনো দুর্ঘটনা, গুরুতর ব্যাধি কিংবা চরম অর্থনৈতিক সংকট যখন প্রান্তিক জনগোষ্ঠীর জীবনের স্বাভাবিক গতি থামিয়ে দেয়, তখন মৌলিক মানবিক সাহচর্যই হয়ে ওঠে বেঁচে থাকার প্রধান আলো । কোনো অসহায় পরিবার বা ব্যক্তি যেন প্রতিকূল পরিস্থিতির কাছে পরাজিত না হন..... ",
+        "হঠাৎ কোনো দুর্ঘটনা, গুরুতর ব্যাধি কিংবা চরম অর্থনৈতিক সংকট যখন প্রান্তিক জনগোষ্ঠীর জীবনের স্বাভাবিক গতি থামিয়ে দেয়, তখন মৌলিক মানবিক সাহচর্যই হয়ে ওঠে বেঁচে থাকার প্রধান আলো । কোনো অসহায় পরিবার বা ব্যক্তি যেন প্রতিকূল পরিস্থিতির কাছে পরাজিত না হন তা নিশ্চিত করতে ডাঃ শামসুল ..... ",
       image: "https://i.ibb.co.com/pvGbR4Lz/FB-IMG-1788676420596.jpg",
     },
     {
@@ -20,13 +20,13 @@ const Service = () => {
     {
       id: 3,
       title: "নারী স্বাবলম্বিতা কর্মসূচি",
-      description: `একটি সমাজ ও পরিবারের স্থায়ী সমাধানের মূল চাবিকাঠি হলো নারীদের অর্থনৈতিক আত্মনির্ভরশীলতা। সমাজে পিছিয়ে পড়া, স্বামীপরিত্যক্তা, বিধবা এবং অর্থনৈতিকভাবে চরম সংকটে থাকা প্রান্তিক নারীদের সম্মানের সাথে বেঁচে থাকার পথ সুগম করতে ‘ডাঃ শামসুল হুদা ও আঞ্জুমান আর সেবাকেন্দ্র’ পরিচালনা .....`,
+      description: `একটি সমাজ ও পরিবারের স্থায়ী সমাধানের মূল চাবিকাঠি হলো নারীদের অর্থনৈতিক আত্মনির্ভরশীলতা। সমাজে পিছিয়ে পড়া, স্বামীপরিত্যক্তা, বিধবা এবং অর্থনৈতিকভাবে চরম সংকটে থাকা প্রান্তিক নারীদের সম্মানের সাথে বেঁচে থাকার পথ সুগম করতে ‘ডাঃ শামসুল হুদা ও আঞ্জুমান আর সেবাকেন্দ্র’ পরিচালনা.....`,
       image: "https://i.ibb.co.com/tMzDc0PD/image-736103-1699027645.jpg",
     },
     {
       id: 4,
       title: "ফ্রি মেডিকেল ক্যাম্প",
-      description: `স্বাস্থ্যসেবা পাওয়া মানুষের মৌলিক অধিকার হলেও অর্থনৈতিক সীমাবদ্ধতা ও ভৌগোলিক দূরত্বের কারণে গ্রামীণ প্রান্তিক জনগোষ্ঠীর এক বিশাল অংশ প্রয়োজনীয় চিকিৎসা সুবিধা থেকে বঞ্চিত হন। এই বাস্তবতা অনুধাবন করে গ্রাম ও প্রত্যন্ত অঞ্চলের অসহায়, দরিদ্র ও দুস্থ মানুষের দোরগোড়ায় মানসম্মত ও আধুনিক চিকিৎসাসেবা.......`,
+      description: `স্বাস্থ্যসেবা পাওয়া মানুষের মৌলিক অধিকার হলেও অর্থনৈতিক সীমাবদ্ধতা ও ভৌগোলিক দূরত্বের কারণে গ্রামীণ প্রান্তিক জনগোষ্ঠীর এক বিশাল অংশ প্রয়োজনীয় চিকিৎসা সুবিধা থেকে বঞ্চিত হন। এই বাস্তবতা অনুধাবন করে গ্রাম ও প্রত্যন্ত অঞ্চলের অসহায়, দরিদ্র ও দুস্থ মানুষের দোরগোড়ায় মানসম্মত ও আধুনিক.....`,
       image: "https://i.ibb.co.com/rKLP0yYb/DSC03895.jpg",
     },
     {
@@ -47,38 +47,50 @@ const Service = () => {
 
   return (
     <div className="mt-10 w-11/12 mx-auto px-4">
+      {/* Heading */}
       <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
         আমাদের সেবাসমূহ
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
         {services.map((service) => (
           <div
             key={service.id}
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden"
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
           >
             {/* Image */}
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-72 object-cover"
-            />
+            <div className="w-full h-56 sm:h-60 md:h-64 lg:h-72 flex-shrink-0 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
 
             {/* Content */}
-            <div className="p-5">
-              <h3 className="text-xl font-bold text-blue-700 mb-2">
+            <div className="p-5 flex flex-col flex-1">
+              {/* Title */}
+              <h3 className="text-xl font-bold text-blue-700 mb-3 min-h-[56px]">
                 {service.title}
               </h3>
 
-              <p className="text-gray-700 leading-loose text-sm mb-4">
+              {/* Description */}
+              <p className="text-gray-700 leading-loose text-sm mb-5 line-clamp-5">
                 {service.description}
               </p>
 
-              <Link to={`/service/${service.id}`}>
-                <button className="bg-red-600 w-full hover:bg-red-700 text-white px-8 py-3 rounded-md transition duration-300">
-                  আরও পড়ুন
-                </button>
-              </Link>
+              {/* Button */}
+              <div className="mt-auto">
+                <Link to={`/service/${service.id}`} className="block w-full">
+                  <button
+                    type="button"
+                    className="bg-red-600 w-full hover:bg-red-700 text-white px-8 py-3 rounded-md transition duration-300 font-semibold"
+                  >
+                    আরও পড়ুন
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         ))}

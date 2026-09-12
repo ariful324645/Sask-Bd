@@ -1,8 +1,14 @@
+import { Link } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const HeroSection = () => {
   // ==============================
+
+  // button onclick?
+
+  const navigate=useNavigate()
   // 5 DIFFERENT HERO IMAGES
   // ==============================
   const images = [
@@ -56,7 +62,7 @@ const HeroSection = () => {
         <div className="w-full max-w-4xl text-left text-white">
           {/* Main Heading */}
           <h1
-            className="text-2xl font-extrabold leading-[1.5] tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]"
+            className="translate-y-3 text-2xl font-extrabold leading-[1.5] tracking-tight text-white sm:translate-y-0 sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]"
             style={{
               fontFamily: "'Noto Serif Bengali', serif",
               textShadow: "2px 3px 8px rgba(0, 0, 0, 0.75)",
@@ -84,8 +90,10 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4 md:mt-9">
             {/* More Info Button */}
+
             <button
               type="button"
+              onClick={() => navigate("/identity")}
               className="flex h-12 w-full items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-5 py-3 text-sm font-extrabold tracking-wide text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/25 sm:w-[150px] sm:text-[15px]"
             >
               আরও জানুন
@@ -94,6 +102,7 @@ const HeroSection = () => {
             {/* Activities Button */}
             <button
               type="button"
+              onClick={() => navigate("/activity")}
               className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border-2 border-blue-700 bg-transparent px-7 py-3 text-base font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:text-white sm:w-[150px]"
             >
               কার্যক্রমসমূহ

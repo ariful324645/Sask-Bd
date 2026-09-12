@@ -49,6 +49,7 @@ const Sheba = () => {
             <div className="relative z-10 w-full max-w-[540px] overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl">
               <img
                 src="https://i.ibb.co.com/xS7StCCz/side1.jpg"
+               
                 alt="Founder"
                 className="h-auto w-full object-cover transition duration-700 hover:scale-105"
               />
@@ -79,10 +80,7 @@ const Sheba = () => {
               </span>
             </div>
 
-            {/* Title */}
-            <h3 className="mb-6 text-2xl font-extrabold leading-relaxed text-blue-900 md:text-4xl">
-              {content.title}
-            </h3>
+         
 
             {/* Quote */}
             <div className="relative mb-7 border-l-4 ">
