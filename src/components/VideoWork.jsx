@@ -18,7 +18,7 @@ const VideoWork = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="mb-5 text-center mt-4 text-[22px] font-bold leading-[1.35] text-[#222] md:text-[24px]">
+        <h2 className="text-3xl my-4 font-bold text-center text-blue-700 ">
           আমাদের কার্যক্রম সম্পর্কে ভিডিও
         </h2>
 

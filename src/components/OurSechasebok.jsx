@@ -86,13 +86,7 @@ const OurSechasebok = () => {
     //   jila: "বরিশাল জেলা",
     //   image: "https://i.ibb.co.com/Vf0CZVH/p6.jpg",
     // },
-    {
-      id: 15,
-      name: "মোঃ আরিফুল ইসলাম",
-      jila: "ঠাকুরগাঁও জেলা",
-      image:
-        "https://i.ibb.co.com/XvrFFhR/Smartly-dressed-man-with-greenery-backdrop-removebg-preview.png",
-    },
+
     {
       id: 16,
       name: "মোঃ রবিউল ইসলাম শাকিল",
@@ -356,7 +350,7 @@ const OurSechasebok = () => {
                 {person.name}
               </h2>
 
-              {/* Jila (moved here) */}
+              {/* Jila */}
               <p className="mt-2 inline-block bg-red-100 text-red-600 text-lg px-3 py-1 rounded-full">
                 {person.jila}
               </p>

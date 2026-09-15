@@ -9,7 +9,7 @@ const Activity = () => {
 
                     <div className="py-10 w-9/12 mx-auto text-lg space-y-6 text-gray-800 font-normal">
                       <p className=" leading-loose">
-                        <span className="font-bold">
+                        <span className=" mr-2 font-bold">
                           ডাঃ শামসুল হুদা ও আঞ্জুমান আর সেবাকেন্দ্র
                         </span>
                         বিভিন্ন শ্রেণিপেশার মানুষের কল্যাণে নানামুখী সেবামূলক

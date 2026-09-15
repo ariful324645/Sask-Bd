@@ -7,7 +7,6 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // ==============================
-  
   // DROPDOWN FUNCTION
   // ==============================
   const toggleMenu = (menu) => {
@@ -26,20 +25,16 @@ const Navbar = () => {
   // DESKTOP TEXT DESIGN
   // ==============================
   const mainTextClass =
-    "whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55] hover:shadow-md lg:px-2.5 lg:text-[15px] xl:px-3 2xl:text-[16px]";
-
-  const mainTextStyle = {
-    fontFamily: "'Noto Sans Bengali', sans-serif",
-  };
+    "whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55] hover:shadow-md lg:px-2.5 lg:text-[15px] xl:px-3 2xl:text-[16px]";
 
   const dropdownTextClass =
-    "block w-full rounded-xl px-4 py-3 text-[16px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-xl px-4 py-3 text-[16px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   const mobileTextClass =
-    "block w-full rounded-xl px-4 py-3 text-[17px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-xl px-4 py-3 text-[17px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   const mobileDropdownTextClass =
-    "block w-full rounded-lg px-4 py-2.5 text-[16px] font-extrabold tracking-wide text-[#111111] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-lg px-4 py-2.5 text-[16px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   return (
     <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip bg-transparent px-2 py-3 sm:px-4 lg:px-6">
@@ -47,10 +42,12 @@ const Navbar = () => {
         {/* ==============================
             MAIN NAVBAR
         ============================== */}
+
         <div className="mx-auto flex min-h-[76px] w-full min-w-0 items-center justify-between gap-2 px-3 sm:gap-3 sm:px-4 lg:gap-4 lg:px-5 xl:px-6 2xl:px-7">
           {/* ==============================
               LOGO
           ============================== */}
+
           <Link
             to="/"
             onClick={closeMobileMenu}
@@ -70,12 +67,11 @@ const Navbar = () => {
           {/* ==============================
               DESKTOP MENU
           ============================== */}
+
           <ul className="hidden min-w-0 flex-1 items-center justify-center gap-1 xl:flex xl:gap-2 2xl:gap-3">
             {/* HOME */}
             <Link to="/" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                হোম
-              </li>
+              <li className={mainTextClass}>হোম</li>
             </Link>
 
             {/* ABOUT */}
@@ -85,9 +81,7 @@ const Navbar = () => {
                 onClick={() => toggleMenu("about")}
                 className="flex items-center gap-0"
               >
-                <span className={mainTextClass} style={mainTextStyle}>
-                  আমাদের সম্পর্কে
-                </span>
+                <span className={mainTextClass}>আমাদের সম্পর্কে</span>
 
                 <FaAngleDown
                   size={15}
@@ -104,7 +98,6 @@ const Navbar = () => {
                       to="/identity"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       প্রতিষ্ঠান পরিচিতি
                     </Link>
@@ -115,7 +108,6 @@ const Navbar = () => {
                       to="/goal"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       লক্ষ্য ও উদ্দেশ্য
                     </Link>
@@ -126,7 +118,6 @@ const Navbar = () => {
                       to="/income"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       আয়ের উৎস
                     </Link>
@@ -137,31 +128,29 @@ const Navbar = () => {
                       to="/activity"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       কার্যক্রম
                     </Link>
                   </li>
-                  {/* 
+
+                  {/*
                   <li>
                     <Link
                       to="/kendriyo"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       কেন্দ্রীয় পরিচালনা পর্ষদ
                     </Link>
-                  </li> */}
+                  </li>
+                  */}
                 </ul>
               )}
             </li>
 
             {/* SERVICES */}
             <Link to="OurSheba" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                আমাদের সেবাসমূহ
-              </li>
+              <li className={mainTextClass}>আমাদের সেবাসমূহ</li>
             </Link>
 
             {/* VOLUNTEER */}
@@ -171,9 +160,7 @@ const Navbar = () => {
                 onClick={() => toggleMenu("about1")}
                 className="flex items-center gap-0"
               >
-                <span className={mainTextClass} style={mainTextStyle}>
-                  স্বেচ্ছাসেবক
-                </span>
+                <span className={mainTextClass}>স্বেচ্ছাসেবক</span>
 
                 <FaAngleDown
                   size={15}
@@ -190,19 +177,17 @@ const Navbar = () => {
                       to="OurShechaSebok"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
                       আমাদের স্বেচ্ছাসেবক
                     </Link>
                   </li>
+
                   <li>
                     <Link
                       to="ssNibondhon"
                       onClick={closeMobileMenu}
                       className={dropdownTextClass}
-                      style={mainTextStyle}
                     >
-                      {" "}
                       স্বেচ্ছাসেবক নিবন্ধন
                     </Link>
                   </li>
@@ -212,48 +197,34 @@ const Navbar = () => {
 
             {/* E-COMMERCE */}
             <Link to="ecomerce" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                ই-কমার্স
-              </li>
+              <li className={mainTextClass}>ই-কমার্স</li>
             </Link>
 
             {/* COURSE */}
             <Link to="course" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                কোর্স
-              </li>
+              <li className={mainTextClass}>কোর্স</li>
             </Link>
 
             {/* GALLERY */}
             <Link to="gallery1" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                গ্যালারি
-              </li>
+              <li className={mainTextClass}>গ্যালারি</li>
             </Link>
 
             {/* VIDEO */}
             <Link to="video1" onClick={closeMobileMenu}>
-              <li className={mainTextClass} style={mainTextStyle}>
-                ভিডিও
-              </li>
+              <li className={mainTextClass}>ভিডিও</li>
             </Link>
-            {/* blog */}
+
+            {/* BLOG */}
             <Link to="blog">
-              {" "}
-              <li
-                className={`${mainTextClass} shrink-0 cursor-pointer`}
-                style={mainTextStyle}
-              >
+              <li className={`${mainTextClass} shrink-0 cursor-pointer`}>
                 ব্লগ
               </li>
             </Link>
+
             {/* CONTACT */}
             <Link to="communication">
-              {" "}
-              <li
-                className={`${mainTextClass} shrink-0 cursor-pointer`}
-                style={mainTextStyle}
-              >
+              <li className={`${mainTextClass} shrink-0 cursor-pointer`}>
                 যোগাযোগ
               </li>
             </Link>
@@ -262,10 +233,10 @@ const Navbar = () => {
           {/* ==============================
               ACCOUNT BUTTON
           ============================== */}
+
           <button
             type="button"
             className="hidden shrink-0 rounded-lg border border-blue-700 bg-blue-700 px-3 py-2.5 text-[14px] font-extrabold tracking-wide text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-emerald-500/25 xl:px-4 xl:text-[15px] 2xl:block"
-            style={mainTextStyle}
           >
             আমার একাউন্ট
           </button>
@@ -273,6 +244,7 @@ const Navbar = () => {
           {/* ==============================
               MOBILE MENU BUTTON
           ============================== */}
+
           <button
             type="button"
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-cyan-100 bg-cyan-50 text-cyan-700 transition duration-300 hover:border-cyan-300 hover:bg-cyan-100 2xl:hidden sm:h-11 sm:w-11"
@@ -286,9 +258,11 @@ const Navbar = () => {
         {/* ==============================
             MOBILE MENU
         ============================== */}
+
         {mobileOpen && (
           <div className="border-t border-slate-100 bg-white px-4 pb-6 pt-4 shadow-lg 2xl:hidden">
             {/* MOBILE BRAND */}
+
             <div className="mb-4 flex min-w-0 items-center gap-3 rounded-2xl border border-cyan-100 bg-gradient-to-r from-cyan-50 to-blue-50 p-3">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden bg-transparent">
                 <img
@@ -298,18 +272,12 @@ const Navbar = () => {
                 />
               </div>
 
-              <div className="min-w-0 ">
-                <h2
-                  className="truncate text-[16px] font-extrabold tracking-wide text-[#111111]"
-                  style={mainTextStyle}
-                >
+              <div className="min-w-0">
+                <h2 className="truncate text-[16px] font-extrabold tracking-wide text-[#111111]">
                   ডাঃ শামসুল হুদা ও
                 </h2>
 
-                <p
-                  className="truncate text-[15px] font-extrabold tracking-wide text-[#111111]"
-                  style={mainTextStyle}
-                >
+                <p className="truncate text-[15px] font-extrabold tracking-wide text-[#111111]">
                   আঞ্জুমান আরা সেবাকেন্দ্র
                 </p>
               </div>
@@ -317,27 +285,26 @@ const Navbar = () => {
 
             <ul className="flex flex-col gap-1">
               {/* HOME */}
+
               <li>
                 <Link
                   to="/"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
-                  style={mainTextStyle}
                 >
                   হোম
                 </Link>
               </li>
 
               {/* MOBILE ABOUT */}
+
               <li>
                 <button
                   type="button"
                   onClick={() => toggleMenu("about")}
                   className="flex w-full items-center justify-between"
                 >
-                  <span className={mobileTextClass} style={mainTextStyle}>
-                    আমাদের সম্পর্কে
-                  </span>
+                  <span className={mobileTextClass}>আমাদের সম্পর্কে</span>
 
                   <FaChevronDown
                     size={12}
@@ -354,7 +321,6 @@ const Navbar = () => {
                         to="/identity"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         প্রতিষ্ঠান পরিচিতি
                       </Link>
@@ -365,7 +331,6 @@ const Navbar = () => {
                         to="/goal"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         লক্ষ্য ও উদ্দেশ্য
                       </Link>
@@ -376,7 +341,6 @@ const Navbar = () => {
                         to="/income"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         আয়ের উৎস
                       </Link>
@@ -387,84 +351,47 @@ const Navbar = () => {
                         to="/activity"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         কার্যক্রম
                       </Link>
                     </li>
 
-                    {/* <li>
+                    {/*
+                    <li>
                       <Link
                         to="/kendriyo"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         কেন্দ্রীয় পরিচালনা পর্ষদ
                       </Link>
-                    </li> */}
+                    </li>
+                    */}
                   </ul>
                 )}
               </li>
 
               {/* SERVICES */}
+
               <li>
                 <Link
                   to="OurSheba"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
-                  style={mainTextStyle}
                 >
                   আমাদের সেবাসমূহ
                 </Link>
               </li>
 
               {/* PROJECT */}
-              <li>
-                <Link
-                  to="allProject"
-                  onClick={closeMobileMenu}
-                  className={mobileTextClass}
-                  style={mainTextStyle}
-                >
-                  চলমান প্রজেক্ট
-                </Link>
-              </li>
 
-              {/* GALLERY */}
-              <li>
-                <Link
-                  to="gallery1"
-                  onClick={closeMobileMenu}
-                  className={mobileTextClass}
-                  style={mainTextStyle}
-                >
-                  গ্যালারি
-                </Link>
-              </li>
-
-              {/* VIDEO */}
-              <li>
-                <Link
-                  to="video1"
-                  onClick={closeMobileMenu}
-                  className={mobileTextClass}
-                  style={mainTextStyle}
-                >
-                  ভিডিও
-                </Link>
-              </li>
-
-              {/* MOBILE VOLUNTEER */}
               <li>
                 <button
                   type="button"
                   onClick={() => toggleMenu("about1")}
                   className="flex w-full items-center justify-between"
                 >
-                  <span className={mobileTextClass} style={mainTextStyle}>
-                    স্বেচ্ছাসেবক
-                  </span>
+                  <span className={mobileTextClass}>স্বেচ্ছাসেবক</span>
 
                   <FaChevronDown
                     size={12}
@@ -481,17 +408,16 @@ const Navbar = () => {
                         to="OurShechaSebok"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         আমাদের স্বেচ্ছাসেবক
                       </Link>
                     </li>
+
                     <li>
                       <Link
-                        to=""
+                        to="/ssNibondhon"
                         onClick={closeMobileMenu}
                         className={mobileDropdownTextClass}
-                        style={mainTextStyle}
                       >
                         স্বেচ্ছাসেবক নিবন্ধন
                       </Link>
@@ -500,41 +426,75 @@ const Navbar = () => {
                 )}
               </li>
 
-          
-              <Link to="blog">
-                <li className={mobileTextClass} style={mainTextStyle}>
-                  ব্লগ
-                </li>
-              </Link>
-
-              {/* CONTACT */}
-              <Link to="communication">
-                <li className={mobileTextClass} style={mainTextStyle}>
-                  যোগাযোগ
-                </li>
-              </Link>
-
               {/* E-COMMERCE */}
+
               <li>
                 <Link
                   to="ecomerce"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
-                  style={mainTextStyle}
                 >
                   ই-কমার্স
                 </Link>
               </li>
 
               {/* COURSE */}
+
               <li>
                 <Link
                   to="course"
                   onClick={closeMobileMenu}
                   className={mobileTextClass}
-                  style={mainTextStyle}
                 >
                   কোর্স
+                </Link>
+              </li>
+
+              {/* GALLERY */}
+
+              <li>
+                <Link
+                  to="gallery1"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                >
+                  গ্যালারি
+                </Link>
+              </li>
+
+              {/* VIDEO */}
+
+              <li>
+                <Link
+                  to="video1"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                >
+                  ভিডিও
+                </Link>
+              </li>
+
+              {/* MOBILE VOLUNTEER */}
+
+              <li>
+                <Link
+                  to="blog"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                >
+                  ব্লগ
+                </Link>
+              </li>
+
+              {/* CONTACT */}
+
+              <li>
+                <Link
+                  to="communication"
+                  onClick={closeMobileMenu}
+                  className={mobileTextClass}
+                >
+                  যোগাযোগ
                 </Link>
               </li>
             </ul>

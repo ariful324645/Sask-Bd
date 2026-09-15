@@ -79,6 +79,7 @@ const ServiceDetails = () => {
       image: "https://i.ibb.co.com/wrrvpmry/1000206030.jpg",
     },
   ];
+
   // id string → number
   const service = services.find((item) => item.id === parseInt(id));
 

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+import { ImArrowUpRight } from "react-icons/im";
 
 const Communication = () => {
   const mapUrl =
@@ -127,7 +129,7 @@ const Communication = () => {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-16 lg:pt-32 pb-6">
-          <h1 className="text-4xl font-bold text-center  text-white">
+          <h1 className="pt-8 pb-7 text-4xl font-bold text-center text-white sm:pt-0 sm:pb-0">
             যোগাযোগ
           </h1>
         </div>
@@ -746,19 +748,7 @@ const Communication = () => {
                     className="group flex h-13 w-full items-center justify-center gap-3 rounded-xl bg-blue-700 px-6 text-sm font-bold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl hover:shadow-blue-700/30 active:translate-y-0"
                   >
                     বার্তা প্রেরণ করুন
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 12h14M13 6l6 6-6 6"
-                      />
-                    </svg>
+                    <FaArrowRight size={15} />
                   </button>
                 </form>
               </div>
@@ -791,9 +781,7 @@ const Communication = () => {
               className="group inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-blue-700 px-6 text-sm font-bold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl"
             >
               Google Maps খুলুন
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                ↗
-              </span>
+              <ImArrowUpRight size={15} />
             </a>
           </div>
 

@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { FaArrowRight, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
@@ -17,9 +15,10 @@ const Sheba = () => {
   };
 
   return (
-    <section className="relative w-11/12 mx-auto overflow-hidden bg-[#f8f7f1] py-6 mt-6 ">
+    <section className="relative w-11/12 mx-auto overflow-hidden bg-[#f8f7f1] py-6 mt-6">
       {/* Decorative Background */}
       <div className="absolute left-0 top-0 h-64 w-64 rounded-full bg-[#e8d9ad]/20 blur-3xl"></div>
+
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#d9e5ee]/40 blur-3xl"></div>
 
       <div className="relative mx-auto w-11/12 max-w-7xl">
@@ -31,7 +30,9 @@ const Sheba = () => {
 
           <div className="mx-auto mt-4 flex items-center justify-center gap-2">
             <span className="h-1 w-16 rounded-full bg-[#d5a928]"></span>
+
             <span className="h-2 w-2 rounded-full bg-blue-700"></span>
+
             <span className="h-1 w-16 rounded-full bg-[#d5a928]"></span>
           </div>
         </div>
@@ -49,7 +50,6 @@ const Sheba = () => {
             <div className="relative z-10 w-full max-w-[540px] overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl">
               <img
                 src="https://i.ibb.co.com/xS7StCCz/side1.jpg"
-               
                 alt="Founder"
                 className="h-auto w-full object-cover transition duration-700 hover:scale-105"
               />
@@ -80,15 +80,14 @@ const Sheba = () => {
               </span>
             </div>
 
-         
-
             {/* Quote */}
-            <div className="relative mb-7 border-l-4 ">
+            <div className="relative mb-7 border-l-4">
               <FaQuoteLeft className="mb-2 text-2xl text-[#d9aa27]" />
 
               <p className="text-2xl font-bold leading-relaxed text-[#b47d08] md:text-2xl">
                 মানুষের জন্য কিছু করার মধ্যেই জীবনের প্রকৃত সার্থকতা।
               </p>
+
               <FaQuoteRight className="mb-2 text-2xl text-[#d9aa27]" />
             </div>
 

@@ -69,14 +69,14 @@ const Service = () => {
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col flex-1">
+            <div className="p-5 flex flex-col flex-1 w-full">
               {/* Title */}
-              <h3 className="text-xl font-bold text-blue-700 mb-3 min-h-[56px]">
+              <h3 className="text-xl font-bold text-blue-700  min-h-[56px] w-full">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-700 leading-loose text-sm mb-5 line-clamp-5">
+              <p className="w-full text-gray-700 leading-loose text-lg mb-5 line-clamp-5 text-justify">
                 {service.description}
               </p>
 

@@ -550,7 +550,7 @@ const Blog = () => {
 
         <div className="relative mx-auto max-w-7xl px-5 pb-10 pt-28 md:px-8 md:pb-16 md:pt-32">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl md:text-4xl">
+            <h1 className="pb-2 text-2xl font-black tracking-tight text-white sm:pb-0 sm:text-3xl md:text-4xl">
               ব্লগ
             </h1>
           </div>
@@ -571,7 +571,7 @@ const Blog = () => {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`rounded-xl px-5 py-3 text-xs font-bold transition-all duration-300 ${
+                  className={`rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ${
                     activeCategory === category
                       ? "bg-blue-700 text-white shadow-lg shadow-blue-700/20"
                       : "bg-gray-50 text-gray-500 hover:bg-blue-700 hover:text-white"
@@ -653,17 +653,17 @@ const Blog = () => {
 
                 <div className="flex flex-col justify-between p-7 md:p-10 lg:p-12">
                   <div className="py-5 lg:py-10">
-                    <div className="mb-5 flex items-center gap-2 text-xs font-semibold text-gray-400">
+                    <div className="mb-5 flex items-center gap-2 text-lg font-semibold text-gray-400">
                       <CalendarDays size={14} />
 
                       {filteredBlogs[0].date}
                     </div>
 
-                    <h2 className="text-3xl font-black leading-tight text-gray-950 md:text-4xl">
+                    <h2 className="text-xl font-black leading-tight text-blue-700 md:text-2xl">
                       {filteredBlogs[0].title}
                     </h2>
 
-                    <p className="mt-6 text-sm leading-8 text-gray-600 md:text-base">
+                    <p className="mt-6 text-sm leading-8 text-gray-600 md:text-lg">
                       {filteredBlogs[0].description}
                     </p>
                   </div>
@@ -671,7 +671,7 @@ const Blog = () => {
                   {/* BUTTON */}
 
                   <div className="border-t border-gray-100 pt-6">
-                    <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-xs font-bold text-white transition-all duration-300 group-hover:bg-blue-800">
+                    <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:bg-blue-800">
                       বিস্তারিত
                       <FaArrowRight size={15} />
                     </span>
@@ -727,7 +727,7 @@ const Blog = () => {
                           <div className="flex flex-1 flex-col p-7 md:p-8">
                             {/* DATE */}
 
-                            <div className="flex items-center gap-2 border-b border-gray-100 pb-5 text-xs font-semibold text-gray-400">
+                            <div className="flex items-center gap-2 border-b border-gray-100 pb-5 text-lg font-semibold text-gray-400">
                               <CalendarDays size={14} />
 
                               {blog.date}
@@ -735,20 +735,20 @@ const Blog = () => {
 
                             {/* TITLE */}
 
-                            <h3 className="mt-6 min-h-[72px] text-2xl font-black leading-tight text-gray-950 md:text-[28px]">
+                            <h3 className="mt-6 min-h-[72px] text-xl font-black leading-tight text-blue-700 md:text-[24px]">
                               {blog.title}
                             </h3>
 
                             {/* DESCRIPTION */}
 
-                            <p className="mt-4 min-h-[84px] text-sm leading-7 text-gray-600 md:text-base">
+                            <p className="mt-4 min-h-[84px] text-sm leading-7 text-gray-600 md:text-lg">
                               {blog.description}
                             </p>
 
                             {/* BUTTON */}
 
                             <div className="mt-auto border-t border-gray-100 pt-6">
-                              <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-xs font-bold text-white shadow-md">
+                              <span className="inline-flex items-center gap-2 rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white shadow-md">
                                 বিস্তারিত
                                 <FaArrowRight size={15} />
                               </span>

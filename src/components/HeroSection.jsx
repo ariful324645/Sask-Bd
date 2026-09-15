@@ -8,7 +8,8 @@ const HeroSection = () => {
 
   // button onclick?
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+
   // 5 DIFFERENT HERO IMAGES
   // ==============================
   const images = [
@@ -58,27 +59,26 @@ const HeroSection = () => {
       {/* ============================== */}
       {/* HERO CONTENT */}
       {/* ============================== */}
+
       <div className="relative z-10 mx-auto flex min-h-[520px] w-11/12 max-w-7xl items-center py-20 sm:min-h-[560px] sm:py-24 md:min-h-[600px] md:py-28 lg:min-h-[650px] lg:py-32 xl:min-h-[750px]">
         <div className="w-full max-w-4xl text-left text-white">
           {/* Main Heading */}
           <h1
-            className="translate-y-3 text-2xl font-extrabold leading-[1.5] tracking-tight text-white sm:translate-y-0 sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px]"
+            className="translate-y-5 whitespace-nowrap text-[20px] font-extrabold leading-[1.5] tracking-tight text-[#C7D2E2] sm:translate-y-0 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[45px]"
             style={{
-              fontFamily: "'Noto Serif Bengali', serif",
-              textShadow: "2px 3px 8px rgba(0, 0, 0, 0.75)",
+              textShadow: "1px 2px 4px rgba(0, 0, 0, 0.4)",
             }}
           >
-            <span className="block font-extrabold text-white">
+            <span className="font-extrabold text-[#C7D2E2]">
               ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
             </span>
           </h1>
 
           {/* Description */}
           <p
-            className="mt-5 max-w-3xl text-sm font-medium leading-8 tracking-wide text-white sm:mt-6 sm:text-base sm:leading-9 md:mt-7 md:text-lg md:leading-10 lg:text-xl lg:leading-[1.9]"
+            className="mt-9 max-w-3xl text-[12px] font-medium leading-8 text-[#B8C5D6] sm:mt-6 sm:text-base sm:leading-9 md:mt-7 md:text-lg md:leading-10 lg:text-xl lg:leading-[1.9]"
             style={{
-              fontFamily: "'Noto Serif Bengali', serif",
-              textShadow: "1px 2px 5px rgba(0, 0, 0, 0.8)",
+              textShadow: "0 1px 2px rgba(0, 0, 0, 0.35)",
             }}
           >
             ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র একটি অরাজনৈতিক, অলাভজনক ও
@@ -90,11 +90,10 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4 md:mt-9">
             {/* More Info Button */}
-
             <button
               type="button"
               onClick={() => navigate("/identity")}
-              className="flex h-12 w-full items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-5 py-3 text-sm font-extrabold tracking-wide text-white transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/25 sm:w-[150px] sm:text-[15px]"
+              className="flex h-12 w-full items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-5 py-3 text-sm font-extrabold tracking-wide text-[#E2E8F0] transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/25 sm:w-[150px] sm:text-[15px]"
             >
               আরও জানুন
             </button>
@@ -103,13 +102,14 @@ const HeroSection = () => {
             <button
               type="button"
               onClick={() => navigate("/activity")}
-              className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border-2 border-blue-700 bg-transparent px-7 py-3 text-base font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:text-white sm:w-[150px]"
+              className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border-2 border-blue-700 bg-transparent px-7 py-3 text-base font-bold text-[#E2E8F0] transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:text-[#E2E8F0] sm:w-[150px]"
             >
               কার্যক্রমসমূহ
             </button>
           </div>
         </div>
       </div>
+
       {/* ============================== */}
       {/* SLIDER DOTS */}
       {/* ============================== */}
