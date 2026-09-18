@@ -1,17 +1,17 @@
-import { Link } from "lucide-react";
 import { useEffect, useState } from "react";
-import { FaArrowRight, FaPlay } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
 const HeroSection = () => {
   // ==============================
-
-  // button onclick?
+  // BUTTON NAVIGATION
+  // ==============================
 
   const navigate = useNavigate();
 
+  // ==============================
   // 5 DIFFERENT HERO IMAGES
   // ==============================
+
   const images = [
     "https://i.ibb.co.com/yBy3R68f/1.jpg",
     "https://i.ibb.co.com/dw672dX0/2.jpg",
@@ -24,21 +24,21 @@ const HeroSection = () => {
 
   // ==============================
   // AUTOMATIC SLIDER
-  // RIGHT → LEFT
   // ==============================
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="relative min-h-[350px] w-full overflow-hidden sm:min-h-[400px] md:min-h-[450px] lg:min-h-[500px] xl:min-h-[550px]">
-      {/* ============================== */}
-      {/* BACKGROUND IMAGE SLIDER */}
-      {/* ============================== */}
+      {/* ==============================
+          BACKGROUND IMAGE SLIDER
+      ============================== */}
 
       {images.map((image, index) => (
         <img
@@ -53,56 +53,212 @@ const HeroSection = () => {
         />
       ))}
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25"></div>
+      {/* ==============================
+          IMAGE DARK OVERLAY
+          Image থাকবে dark, বেশি light হবে না
+      ============================== */}
 
-      {/* ============================== */}
-      {/* HERO CONTENT */}
-      {/* ============================== */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30" />
 
-      <div className="relative z-10 mx-auto flex min-h-[520px] w-11/12 max-w-7xl items-center py-20 sm:min-h-[560px] sm:py-24 md:min-h-[600px] md:py-28 lg:min-h-[650px] lg:py-32 xl:min-h-[750px]">
+      {/* Bottom subtle shadow */}
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+      {/* ==============================
+          HERO CONTENT
+      ============================== */}
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          min-h-[520px]
+          w-[92%]
+          max-w-7xl
+          items-center
+          py-12
+
+          sm:min-h-[560px]
+          sm:w-11/12
+          sm:py-16
+
+          md:min-h-[600px]
+          md:py-20
+
+          lg:min-h-[650px]
+          lg:py-24
+
+          xl:min-h-[750px]
+          xl:py-28
+        "
+      >
         <div className="w-full max-w-4xl text-left text-white">
-          {/* Main Heading */}
+          {/* ==============================
+              MAIN HEADING
+          ============================== */}
           <h1
-            className="translate-y-5 whitespace-nowrap text-[20px] font-extrabold leading-[1.5] tracking-tight text-[#C7D2E2] sm:translate-y-0 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[45px]"
+            className="
+    max-w-full
+    text-[20px]
+    font-bold
+    leading-[1.4]
+    tracking-normal
+    text-[#E5E7EB]
+
+    sm:whitespace-nowrap
+    sm:text-2xl
+    sm:leading-[1.4]
+
+    md:text-3xl
+    md:leading-[1.45]
+
+    lg:text-4xl
+    lg:leading-[1.5]
+
+    xl:text-[45px]
+    xl:leading-[1.5]
+  "
             style={{
-              textShadow: "1px 2px 4px rgba(0, 0, 0, 0.4)",
+              textShadow:
+                "0 2px 5px rgba(0,0,0,0.75), 0 1px 2px rgba(0,0,0,0.85)",
             }}
           >
-            <span className="font-extrabold text-[#C7D2E2]">
-              ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
-            </span>
+            ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র
           </h1>
 
-          {/* Description */}
-          <p
-            className="mt-9 max-w-3xl text-[12px] font-medium leading-8 text-[#B8C5D6] sm:mt-6 sm:text-base sm:leading-9 md:mt-7 md:text-lg md:leading-10 lg:text-xl lg:leading-[1.9]"
-            style={{
-              textShadow: "0 1px 2px rgba(0, 0, 0, 0.35)",
-            }}
-          >
-            ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র একটি অরাজনৈতিক, অলাভজনক ও
-            মানবকল্যাণমূলক প্রতিষ্ঠান। মানুষের কল্যাণে নিবেদিত সেবামূলক
-            কার্যক্রমের মাধ্যমে একটি সুন্দর, মানবিক ও কল্যাণময় সমাজ গড়তে আমরা
-            কাজ করে যাচ্ছি।
-          </p>
+          {/* ==============================
+    DESCRIPTION
+============================== */}
 
-          {/* Buttons */}
-          <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4 md:mt-9">
-            {/* More Info Button */}
+          <div
+            className="
+    mt-4
+    w-full
+    max-w-3xl
+
+    sm:mt-5
+    md:mt-6
+  "
+          >
+            <p
+              className="
+      text-[16px]
+      font-normal
+      leading-[1.65]
+      tracking-normal
+      text-[#D1D5DB]
+
+      sm:text-[18px]
+      sm:leading-[1.7]
+
+      md:text-lg
+      md:leading-[1.8]
+
+      lg:text-xl
+      lg:leading-[1.85]
+    "
+            >
+              ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্র একটি অরাজনৈতিক, অলাভজনক
+              ও মানবকল্যাণমূলক প্রতিষ্ঠান। মানুষের কল্যাণে নিবেদিত সেবামূলক
+              কার্যক্রমের মাধ্যমে একটি সুন্দর, মানবিক ও কল্যাণময় সমাজ গড়তে আমরা
+              কাজ করে যাচ্ছি।
+            </p>
+          </div>
+
+          {/* ==============================
+              BUTTONS
+          ============================== */}
+
+          <div
+            className="
+              mt-5
+              flex
+              flex-col
+              gap-3
+
+              sm:mt-7
+              sm:flex-row
+              sm:gap-4
+
+              md:mt-8
+            "
+          >
+            {/* MORE INFO BUTTON */}
+
             <button
               type="button"
               onClick={() => navigate("/identity")}
-              className="flex h-12 w-full items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-5 py-3 text-sm font-extrabold tracking-wide text-[#E2E8F0] transition-all duration-300 hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-800/25 sm:w-[150px] sm:text-[15px]"
+              className="
+                flex
+                h-11
+                w-full
+                items-center
+                justify-center
+                rounded-lg
+                border
+                border-blue-700
+                bg-blue-700
+                px-5
+                py-2.5
+                text-sm
+                font-bold
+                tracking-wide
+                text-white
+                shadow-lg
+                shadow-blue-900/25
+                transition-all
+                duration-300
+
+                hover:-translate-y-1
+                hover:bg-blue-800
+                hover:shadow-xl
+                hover:shadow-blue-900/40
+
+                sm:h-12
+                sm:w-[150px]
+                sm:text-[15px]
+              "
             >
               আরও জানুন
             </button>
 
-            {/* Activities Button */}
+            {/* ACTIVITIES BUTTON */}
+
             <button
               type="button"
               onClick={() => navigate("/activity")}
-              className="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-lg border-2 border-blue-700 bg-transparent px-7 py-3 text-base font-bold text-[#E2E8F0] transition duration-300 hover:-translate-y-1 hover:bg-blue-800 hover:text-[#E2E8F0] sm:w-[150px]"
+              className="
+                inline-flex
+                h-11
+                w-full
+                items-center
+                justify-center
+                gap-3
+                rounded-lg
+                border-2
+                border-blue-600
+                bg-black/10
+                px-7
+                py-2.5
+                text-sm
+                font-bold
+                text-white
+                backdrop-blur-[1px]
+                transition-all
+                duration-300
+
+                hover:-translate-y-1
+                hover:bg-blue-700
+                hover:text-white
+                hover:shadow-lg
+                hover:shadow-blue-900/40
+
+                sm:h-12
+                sm:w-[150px]
+                sm:text-base
+              "
             >
               কার্যক্রমসমূহ
             </button>
@@ -110,18 +266,30 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* ============================== */}
-      {/* SLIDER DOTS */}
-      {/* ============================== */}
+      {/* ==============================
+          SLIDER DOTS
+      ============================== */}
 
-      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2 sm:bottom-6">
+      <div
+        className="
+          absolute
+          bottom-5
+          left-1/2
+          z-20
+          flex
+          -translate-x-1/2
+          gap-2
+
+          sm:bottom-6
+        "
+      >
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentImage(index)}
             className={`h-2 rounded-full transition-all duration-300 ${
               currentImage === index
-                ? "w-8 bg-white"
+                ? "w-8 bg-white shadow-md"
                 : "w-2 bg-white/50 hover:bg-white"
             }`}
             aria-label={`Go to slide ${index + 1}`}

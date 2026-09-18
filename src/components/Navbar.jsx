@@ -25,16 +25,16 @@ const Navbar = () => {
   // DESKTOP TEXT DESIGN
   // ==============================
   const mainTextClass =
-    "whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55] hover:shadow-md lg:px-2.5 lg:text-[15px] xl:px-3 2xl:text-[16px]";
+    "whitespace-nowrap rounded-full px-2 py-2 text-[14px] font-extrabold tracking-wide text-[#1E293B] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55] hover:shadow-md lg:px-2.5 lg:text-[15px] xl:px-3 2xl:text-[16px]";
 
   const dropdownTextClass =
-    "block w-full rounded-xl px-4 py-3 text-[16px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-xl px-4 py-3 text-[16px] font-extrabold tracking-wide text-[#1E293B] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   const mobileTextClass =
-    "block w-full rounded-xl px-4 py-3 text-[17px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-xl px-4 py-3 text-[17px] font-extrabold tracking-wide text-[#1E293B] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   const mobileDropdownTextClass =
-    "block w-full rounded-lg px-4 py-2.5 text-[16px] font-extrabold tracking-wide text-[#334155] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
+    "block w-full rounded-lg px-4 py-2.5 text-[16px] font-extrabold tracking-wide text-[#1E293B] transition-all duration-300 hover:bg-[#DDF5F1] hover:text-[#008B55]";
 
   return (
     <header className="sticky top-0 z-50 w-full max-w-full overflow-x-clip bg-transparent px-2 py-3 sm:px-4 lg:px-6">

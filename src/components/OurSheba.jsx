@@ -46,14 +46,15 @@ const Service = () => {
   ];
 
   return (
-    <div className="mt-10 w-11/12 mx-auto px-4">
+    <div className="">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center text-blue-700 mb-10">
+
+      <h1 className="text-4xl font-bold mb-6 text-center bg-gray-700 pt-32 pb-8 rounded-lg text-white">
         আমাদের সেবাসমূহ
-      </h2>
+      </h1>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
+      <div className="grid w-11/12 mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
         {services.map((service) => (
           <div
             key={service.id}

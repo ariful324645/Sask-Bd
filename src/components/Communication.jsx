@@ -165,7 +165,7 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-sm font-medium text-gray-500">
+                <p className="text-lg font-medium text-gray-500">
                   ফোনে যোগাযোগ
                 </p>
 
@@ -202,7 +202,7 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-sm font-medium text-gray-500">
+                <p className="text-lg font-medium text-gray-500">
                   ই-মেইলে যোগাযোগ
                 </p>
 
@@ -241,7 +241,7 @@ const Communication = () => {
               </div>
 
               <div className="min-w-0">
-                <p className="text-sm font-medium text-gray-500">
+                <p className="text-lg font-medium text-gray-500">
                   আমাদের ঠিকানা
                 </p>
 
@@ -269,13 +269,13 @@ const Communication = () => {
               </span>
             </div>
 
-            <h2 className="text-2xl font-black leading-tight tracking-tight text-gray-900 md:text-2xl">
+            <h2 className="text-2xl font-black leading-tight tracking-tight text-blue-700 md:text-2xl">
               আমরা আছি আপনার
               <br />
               পাশে।
             </h2>
 
-            <p className="mt-5 max-w-md text-sm leading-7 text-gray-600">
+            <p className="mt-5 max-w-md text-lg leading-7 text-gray-600">
               আপনার কোনো প্রশ্ন, মতামত, পরামর্শ কিংবা সহযোগিতার প্রয়োজন হলে
               আমাদের জানাতে পারেন। আপনার বার্তা আমাদের কাছে পৌঁছানোই যোগাযোগের
               প্রথম ধাপ।
@@ -302,7 +302,7 @@ const Communication = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm text-gray-500">ফোন</p>
+                  <p className="text-lg text-gray-500">ফোন</p>
 
                   <p className="mt-1 text-sm font-bold text-gray-900">
                     {phone}
@@ -330,7 +330,7 @@ const Communication = () => {
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm text-gray-500">ই-মেইল</p>
+                  <p className="text-lg text-gray-500">ই-মেইল</p>
 
                   <p className="mt-1 truncate text-sm font-bold text-gray-900">
                     {email}
@@ -363,7 +363,7 @@ const Communication = () => {
                 </div>
 
                 <div>
-                  <p className="text-xs font-medium text-blue-300">
+                  <p className="text-sm font-medium text-blue-300">
                     আমাদের সেবাকেন্দ্র
                   </p>
 
@@ -377,10 +377,10 @@ const Communication = () => {
                     href={mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-white transition hover:text-blue-300"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-white transition hover:text-blue-300"
                   >
                     লোকেশন দেখুন
-                    <span>↗</span>
+                    <ImArrowUpRight size={15} />
                   </a>
                 </div>
               </div>
@@ -462,7 +462,7 @@ const Communication = () => {
 
                   {/* NAME */}
                   <div className="border-b border-gray-200 py-3">
-                    <p className="text-xs font-medium text-gray-500">নাম</p>
+                    <p className="text-sm font-medium text-gray-500">নাম</p>
 
                     <p className="mt-1 text-sm font-bold text-gray-900">
                       {submittedData.name}
@@ -471,7 +471,7 @@ const Communication = () => {
 
                   {/* EMAIL */}
                   <div className="border-b border-gray-200 py-3">
-                    <p className="text-xs font-medium text-gray-500">ই-মেইল</p>
+                    <p className="text-sm font-medium text-gray-500">ই-মেইল</p>
 
                     <p className="mt-1 break-all text-sm font-bold text-gray-900">
                       {submittedData.email}
@@ -480,7 +480,7 @@ const Communication = () => {
 
                   {/* MOBILE */}
                   <div className="border-b border-gray-200 py-3">
-                    <p className="text-xs font-medium text-gray-500">মোবাইল</p>
+                    <p className="text-sm font-medium text-gray-500">মোবাইল</p>
 
                     <p className="mt-1 text-sm font-bold text-gray-900">
                       {submittedData.mobile}
@@ -489,7 +489,7 @@ const Communication = () => {
 
                   {/* SUBJECT */}
                   <div className="border-b border-gray-200 py-3">
-                    <p className="text-xs font-medium text-gray-500">বিষয়</p>
+                    <p className="text-sm font-medium text-gray-500">বিষয়</p>
 
                     <p className="mt-1 text-sm font-bold text-gray-900">
                       {submittedData.subject}
@@ -498,7 +498,7 @@ const Communication = () => {
 
                   {/* MESSAGE */}
                   <div className="py-3">
-                    <p className="text-xs font-medium text-gray-500">
+                    <p className="text-sm font-medium text-gray-500">
                       আপনার বার্তা
                     </p>
 
@@ -509,7 +509,7 @@ const Communication = () => {
 
                   {/* TIME */}
                   <div className="mt-2 rounded-xl bg-blue-50 px-4 py-3">
-                    <p className="text-xs text-blue-700">প্রেরণের সময়</p>
+                    <p className="text-sm text-blue-700">প্রেরণের সময়</p>
 
                     <p className="mt-1 text-xs font-bold text-blue-900">
                       {submittedData.submittedAt}
@@ -552,13 +552,9 @@ const Communication = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-black text-gray-900">
+                    <h3 className="text-2xl font-black text-blue-700">
                       যোগাযোগ ফর্ম
                     </h3>
-
-                    <p className="mt-2 text-sm text-gray-500">
-                      আপনার সকল তথ্য পূরণ করে বার্তা পাঠান।
-                    </p>
                   </div>
 
                   <div className="hidden h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700 sm:flex">
@@ -583,7 +579,7 @@ const Communication = () => {
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                   {/* NAME */}
                   <div>
-                    <label className="mb-2 block text-sm font-bold text-gray-700">
+                    <label className="mb-2 block text-lg font-bold text-gray-700">
                       আপনার নাম
                       <span className="ml-1 text-red-500">*</span>
                     </label>
@@ -612,7 +608,7 @@ const Communication = () => {
                   <div className="grid gap-5 sm:grid-cols-2">
                     {/* EMAIL */}
                     <div>
-                      <label className="mb-2 block text-sm font-bold text-gray-700">
+                      <label className="mb-2 block text-lg font-bold text-gray-700">
                         ই-মেইল
                         <span className="ml-1 text-red-500">*</span>
                       </label>
@@ -639,7 +635,7 @@ const Communication = () => {
 
                     {/* MOBILE */}
                     <div>
-                      <label className="mb-2 block text-sm font-bold text-gray-700">
+                      <label className="mb-2 block text-lg font-bold text-gray-700">
                         মোবাইল
                         <span className="ml-1 text-red-500">*</span>
                       </label>
@@ -668,7 +664,7 @@ const Communication = () => {
 
                   {/* SUBJECT */}
                   <div>
-                    <label className="mb-2 block text-sm font-bold text-gray-700">
+                    <label className="mb-2 block text-lg font-bold text-gray-700">
                       বিষয়
                       <span className="ml-1 text-red-500">*</span>
                     </label>
@@ -709,7 +705,7 @@ const Communication = () => {
 
                   {/* MESSAGE */}
                   <div>
-                    <label className="mb-2 block text-sm font-bold text-gray-700">
+                    <label className="mb-2 block text-lg font-bold text-gray-700">
                       আপনার বার্তা
                       <span className="ml-1 text-red-500">*</span>
                     </label>
@@ -745,7 +741,7 @@ const Communication = () => {
                   {/* SUBMIT */}
                   <button
                     type="submit"
-                    className="group flex h-13 w-full items-center justify-center gap-3 rounded-xl bg-blue-700 px-6 text-sm font-bold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl hover:shadow-blue-700/30 active:translate-y-0"
+                    className="group flex h-13 w-full items-center justify-center gap-3 rounded-xl bg-blue-700 px-6 text-lg font-bold text-white shadow-lg shadow-blue-700/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-xl hover:shadow-blue-700/30 active:translate-y-0"
                   >
                     বার্তা প্রেরণ করুন
                     <FaArrowRight size={15} />
@@ -764,11 +760,11 @@ const Communication = () => {
         <div className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-20">
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <h2 className="text-2xl font-black tracking-tight text-gray-900 md:text-2xl">
+              <h2 className="text-2xl font-black tracking-tight text-blue-700 md:text-2xl">
                 আমাদের অবস্থান
               </h2>
 
-              <p className="mt-3 max-w-xl text-sm leading-7 text-gray-500">
+              <p className="mt-3 max-w-xl text-lg leading-7 text-gray-500">
                 ডাঃ শামসুল হুদা ও আঞ্জুমান আরা সেবাকেন্দ্রে আসতে Google Maps-এর
                 লোকেশন ব্যবহার করুন।
               </p>
